@@ -4,7 +4,9 @@ export DOTFILES="$HOME/.dotfiles"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
-
+mkdir -p $XDG_CACHE_HOME
+mkdir -p $XDG_CONFIG_HOME
+mkdir-p $XDG_DATA_HOME
 
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
