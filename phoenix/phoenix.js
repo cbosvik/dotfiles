@@ -7,6 +7,12 @@
 // while developing run log stream --process Phoenix in a console
 
 // common screen locations
+const topSixty = {
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0.4,
+};
 const topHalf = {
   left: 0,
   top: 0,
@@ -47,7 +53,7 @@ guakeApp({
   key: "´",
   modifiers: ["cmd"],
   appName: "kitty",
-  position: topHalf,
+  position: topSixty,
   followsMouse: true,
   hideOnBlur: true,
 });
