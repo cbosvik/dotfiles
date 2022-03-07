@@ -57,6 +57,14 @@ guakeApp({
   followsMouse: true,
   hideOnBlur: true,
 });
+guakeApp({
+  key: "§",
+  modifiers: ["cmd"],
+  appName: "kitty",
+  position: full,
+  followsMouse: true,
+  hideOnBlur: true,
+});
 /*guakeApp({
   key: "s",
   modifiers: ["alt"],
