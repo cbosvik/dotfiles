@@ -2,39 +2,27 @@
 
 ## Make a backup of your existing files
 ```bash
-mkdir -p ~/.backups/zsh
-mv ~/.zshrc ~/.backups/zsh/zshrc.old
-mv ~/.zprofile ~/.backups/zsh/zprofile.old
-```
+export DOTFILES="$HOME/.dotfiles"
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+mkdir -p $XDG_CACHE_HOME
+mkdir -p $XDG_CONFIG_HOME
+mkdir-p $XDG_DATA_HOME
 
-## Clone this repo
-Clone this repo to ~/.config/zsh
-```bash
-mkdir -p ~/.config
-cd ~/.config
-git clone git@github.com:bosvik/zshrc.git zsh
-mkdir -p ~/.config/zsh/themes
-mkdir -p ~/.config/zsh/plugins
-```
-### powerlevel10k
-
-```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10
-```
-### zsh-autosuggestions
-```bash
-mdir ~/zsh/plugins
-cd ~/zsh/plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions
-```
-### zsh-syntax-highlighting
-```bash
-cd ~/zsh/plugins
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+ln -sf $DOTFILES/zsh/zshenv $HOME/.zshenv
+mkdir -p $ZDOTDIR
+ln -sf $DOTFILES/zsh/zprofile $ZDOTDIR/.zprofile
+ln -sf $DOTFILES/zsh/zshrc $ZDOTDIR/.zshrc
+ln -sf $DOTFILES/zsh/p10k.zsh $ZDOTDIR/.p10k.zsh
+mkdir -p $ZDOTDIR/themes
+mkdir -p $ZDOTDIR/plugins
+cd $ZDOTDIR/plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+cd $ZDOTDIR/themes
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git 
 ```
-### Symlink needed files
-```bash
-ln -s ~/.config/zsh/p10k.zsh ~/.p10k.zsh
-ln -s ~/.config/zsh/zshrc ~/.zshrc
-ln -s ~/.config/zsh/zprofile ~/.zprofile
-```
+
