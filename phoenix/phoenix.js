@@ -58,7 +58,7 @@ guakeApp({
   hideOnBlur: true,
 });
 guakeApp({
-  key: "§",
+  key: "¨",
   modifiers: ["cmd"],
   appName: "kitty",
   position: full,
