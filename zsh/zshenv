@@ -17,3 +17,6 @@ export SAVEHIST=10000                   # Maximum events in history file
 
 # nvim
 export NVIMDIR="$XDG_CONFIG_HOME/nvim"
+
+# code
+export CODEDIR=$HOME/code
