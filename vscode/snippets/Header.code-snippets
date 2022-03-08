@@ -1,0 +1,17 @@
+{
+	"Header": {
+		"scope":"markdown",
+		"prefix":"head",
+		"body":[
+			"---",
+			"id: '${CURRENT_YEAR}${CURRENT_MONTH}${CURRENT_DATE}${CURRENT_HOUR}${CURRENT_MINUTE}'",
+			"tags: ['${CURRENT_YEAR}${CURRENT_MONTH}${CURRENT_DATE}']",
+			"related:[]",
+			"from:",
+			"---",
+			"",
+			"# {title}"
+		],
+		"description": "The default note template"
+	}
+}

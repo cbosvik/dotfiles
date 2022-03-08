@@ -1,0 +1,40 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "cmd+ctrl+n",
+        "command":"vsnotes.newNote"
+    },
+    {
+        "key": "ctrl+h",
+        "command":"workbench.action.navigateLeft",
+        "when": "neovim.mode == normal"
+    },
+    {
+        "key": "ctrl+j",
+        "command":"workbench.action.navigateDown",
+        "when": "neovim.mode == normal"
+    },
+    {
+        "key": "ctrl+k",
+        "command":"workbench.action.navigateUp",
+        "when": "neovim.mode == normal"
+    },
+    {
+        "key": "ctrl+l",
+        "command":"workbench.action.navigateRight",
+        "when": "neovim.mode == normal"
+    },
+    {
+        "command":"vscode-neovim.compositeEscape1",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
+    },
+    {
+        "command":"vscode-neovim.compositeEscape1",
+        "key": "k",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "k"
+    },
+    
+]
