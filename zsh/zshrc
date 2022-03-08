@@ -20,6 +20,7 @@ alias kns="kubens"
 alias k="kubectl"
 alias kga="kubectl get all"
 alias kgans="kubectl get all --all-namespaces"
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export NVM_DIR="$HOME/.nvm"
