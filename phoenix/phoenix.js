@@ -66,14 +66,6 @@ guakeApp({
   hideOnBlur: true,
 });
 /*guakeApp({
-  key: "s",
-  modifiers: ["alt"],
-  appName: "Slack",
-  position: leftHalf,
-  followsMouse: true,
-  hideOnBlur: false,
-});
-guakeApp({
   key: "m",
   modifiers: ["alt"],
   appName: "Messages",
