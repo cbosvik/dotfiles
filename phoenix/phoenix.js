@@ -65,6 +65,14 @@ guakeApp({
   followsMouse: true,
   hideOnBlur: true,
 });
+guakeApp({
+  key: "c",
+  modifiers: ["ctrl", "shift"],
+  appName: "Code",
+  position: leftHalf,
+  followsMouse: false,
+  hideOnBlur: false,
+});
 /*guakeApp({
   key: "m",
   modifiers: ["alt"],
