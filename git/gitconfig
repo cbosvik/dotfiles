@@ -1,0 +1,7 @@
+[user]
+	email = christer.bosvik@skf.com
+	name = Christer Bosvik
+[core]
+	excludesfile = /Users/cb/.gitignore
+[init]
+	defaultBranch = main
