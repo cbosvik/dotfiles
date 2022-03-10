@@ -1,4 +1,5 @@
 # gitconfig
 ```
-ln -sf /Users/cb/.dotfiles/git/gitconfig /Users/cb/.gitconfig
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ```
