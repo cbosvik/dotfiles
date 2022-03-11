@@ -47,24 +47,27 @@ const full = {
   right: 0,
   bottom: 0,
 };
+const ALACRITTY_APP = 'Alacritty';
 
 // the actual applications
 guakeApp({
   key: "´",
   modifiers: ["cmd"],
-  appName: "kitty",
+  appName: "Alacritty",
   position: topSixty,
   followsMouse: true,
   hideOnBlur: true,
 });
+/*
 guakeApp({
-  key: "¨",
+  key: "<",
   modifiers: ["cmd"],
   appName: "kitty",
   position: full,
   followsMouse: true,
   hideOnBlur: true,
 });
+*/
 guakeApp({
   key: "c",
   modifiers: ["ctrl", "shift"],
