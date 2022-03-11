@@ -49,6 +49,7 @@ return packer.startup(function(use)
     use  'ChristianChiarulli/vscode-easymotion'
     use 'machakann/vim-highlightedyank'
   else  
+    use "christoomey/vim-tmux-navigator"
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
     use "numToStr/Comment.nvim" -- Easily comment stuff
     use "kyazdani42/nvim-web-devicons"
