@@ -7,6 +7,12 @@
 // while developing run log stream --process Phoenix in a console
 
 // common screen locations
+const topNinety = {
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0.00,
+};
 const topSixty = {
   left: 0,
   top: 0,
@@ -54,7 +60,7 @@ guakeApp({
   key: "´",
   modifiers: ["cmd"],
   appName: "Alacritty",
-  position: topSixty,
+  position: topNinety,
   followsMouse: true,
   hideOnBlur: true,
 });
