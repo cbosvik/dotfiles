@@ -60,20 +60,18 @@ guakeApp({
   key: "´",
   modifiers: ["cmd"],
   appName: "Alacritty",
-  position: topNinety,
+  position: topSixty,
   followsMouse: true,
   hideOnBlur: true,
 });
-/*
 guakeApp({
-  key: "<",
+  key: "¨",
   modifiers: ["cmd"],
-  appName: "kitty",
+  appName: "Alacritty",
   position: full,
   followsMouse: true,
   hideOnBlur: true,
 });
-*/
 guakeApp({
   key: "c",
   modifiers: ["ctrl", "shift"],
