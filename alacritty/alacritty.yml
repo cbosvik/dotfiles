@@ -435,12 +435,12 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-# shell:
-#   program: /bin/zsh
-#   args:
-#     - -l
-#     - -c 
-#     - "tmux attach -t default || tmux new -s default"
+shell:
+   program: /bin/zsh
+   args:
+     - -l
+     - -c 
+     - "tmux attach -t default || tmux new -s default"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
