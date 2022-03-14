@@ -6,7 +6,7 @@
     "editor.fontFamily": "FiraCode Nerd Font",
     "redhat.telemetry.enabled": false,
     "workbench.list.automaticKeyboardNavigation": false,
-    "vsnotes.defaultNotePath": "/users/cb/code/home/notebook",
+    /*"vsnotes.defaultNotePath": "/users/cb/code/home/notebook",
     "vsnotes.defaultNoteName":"{title}.{ext}",
     "vsnotes.noteTitleConvertSpaces": "_",
     "vsnotes.tokens": [
@@ -32,7 +32,7 @@
     "vsnotes.defaultSnippet": {
         "langId": "markdown",
         "name": "Header"
-    },
+    },*/
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true
