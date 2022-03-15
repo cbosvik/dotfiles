@@ -80,6 +80,14 @@ guakeApp({
   followsMouse: false,
   hideOnBlur: false,
 });
+guakeApp({
+  key: "a",
+  modifiers: ["ctrl", "shift"],
+  appname: "Azuredatastudio",
+  position: rightHalf,
+  followsMouse: false,
+  hideOnBlur:false,
+});
 /*guakeApp({
   key: "m",
   modifiers: ["alt"],
