@@ -441,8 +441,8 @@ shell:
    program: /bin/zsh
    args:
      - -l
-       # - -c 
-       #- "tmux attach -t default || tmux new -s default"
+     - -c 
+     - "tmux attach -t base || tmux new -s base"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
