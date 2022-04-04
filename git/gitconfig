@@ -1,6 +1,6 @@
 [user]
 	email = christer.bosvik@skf.com
-	name = Christer Bosvik
+	name = bosvik
 [core]
 	excludesfile = /Users/cb/.gitignore
 [init]
