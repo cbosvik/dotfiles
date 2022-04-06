@@ -76,7 +76,7 @@ guakeApp({
   key: "c",
   modifiers: ["ctrl", "shift"],
   appName: "Code",
-  position: leftHalf,
+  position: full,
   followsMouse: false,
   hideOnBlur: false,
 });
