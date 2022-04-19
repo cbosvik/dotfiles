@@ -40,5 +40,7 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": -2
+    "window.zoomLevel": -1,
+    "vscode-edge-devtools.mirrorEdits": true,
+    "vscode-edge-devtools.fallbackRevision": "@c8275fcfc2e02d5ca43c76374fa8200557b8712c"
 }
