@@ -36,11 +36,17 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "git.autofetch": true,
-    "workbench.iconTheme": "material-icon-theme",
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "window.zoomLevel": -1,
     "vscode-edge-devtools.mirrorEdits": true,
-    "vscode-edge-devtools.fallbackRevision": "@c8275fcfc2e02d5ca43c76374fa8200557b8712c"
+    "vscode-edge-devtools.fallbackRevision": "@c8275fcfc2e02d5ca43c76374fa8200557b8712c",
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
