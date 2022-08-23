@@ -39,7 +39,6 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "window.zoomLevel": -1,
     "vscode-edge-devtools.mirrorEdits": true,
     "vscode-edge-devtools.fallbackRevision": "@c8275fcfc2e02d5ca43c76374fa8200557b8712c",
     "[javascript]": {
@@ -48,5 +47,10 @@
     "workbench.iconTheme": "material-icon-theme",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "window.zoomLevel": -1,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.startupEditor": "none"
 }

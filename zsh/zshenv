@@ -21,3 +21,4 @@ export NVIMDIR="$XDG_CONFIG_HOME/nvim"
 # code
 export CODEDIR=$HOME/code
 export SKF=$CODEDIR/skf
+
