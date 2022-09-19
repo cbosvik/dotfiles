@@ -22,3 +22,8 @@ export NVIMDIR="$XDG_CONFIG_HOME/nvim"
 export CODEDIR=$HOME/code
 export SKF=$CODEDIR/skf
 
+#Go
+export GOPATH=$HOME/go
+#export GOROOT="$(brew --prefix golang)/libexec"
+
+#export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
