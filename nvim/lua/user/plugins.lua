@@ -46,8 +46,8 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
     use { 'tpope/vim-surround' }
   if vim.fn.exists('g:vscode') == 1 then
-    use  'ChristianChiarulli/vscode-easymotion'
-    use 'machakann/vim-highlightedyank'
+  --  use  'ChristianChiarulli/vscode-easymotion'
+  --  use 'machakann/vim-highlightedyank'
   else  
     use "christoomey/vim-tmux-navigator"
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter

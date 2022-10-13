@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Dracula",
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
     "editor.codeLensFontFamily": "FiraCode Nerd Font Mono",
@@ -44,7 +43,7 @@
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -52,5 +51,84 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Dracula",
+    "vscode-neovim.highlightGroups.ignoreHighlights": [
+
+        "EndOfBuffer",
+        "ErrorMsg",
+        "MoreMsg",
+        "ModeMsg",
+        "Question",
+        "VisualNC",
+        "WarningMsg",
+        "^Diff",
+        "Sign",
+        "SignColumn",
+        "^Spell",
+        "^Pmenu",
+        "^Tab",
+        "ColorColumn",
+        "QuickFixLine",
+        "MsgSeparator",
+        "MsgArea",
+        "^RedrawDebug",
+        "^.*MatchParen",
+        "^Nvim",
+        "Operator",
+        "Delimiter",
+        "Identifier",
+        "SpecialChar",
+        "Number",
+        "Type",
+        "String",
+        "Error",
+        "Comment",
+        "Constant",
+        "Special",
+        "Statement",
+        "PreProc",
+        "Underlined",
+        "Ignore",
+        "Todo",
+        "Character",
+        "Boolean",
+        "Float",
+        "Function",
+        "Conditional",
+        "Repeat",
+        "Label",
+        "Keyword",
+        "Exception",
+        "Include",
+        "Define",
+        "Macro",
+        "PreCondit",
+        "StorageClass",
+        "Structure",
+        "Typedef",
+        "Tag",
+        "SpecialComment",
+        "Debug",
+        "Folded",
+        "FoldColumn"
+    ],
+    "vscode-neovim.highlightGroups.highlights": {
+
+        "Directory": "vim",
+        "IncSearch": {
+            "backgroundColor": "theme.editor.findMatchBackground",
+            "borderColor": "theme.editor.findMatchBorder"
+        },
+        "Search": {
+            "backgroundColor": "theme.editor.findMatchHighlightBackground",
+            "borderColor": "theme.editor.findMatchHighlightBorder"
+        },
+        "Visual": {
+            "backgroundColor": "theme.editor.selectionBackground"
+        },
+        "Conceal": "vim",
+        "Substitute": "vim"
+    },
+    "vscode-neovim.highlightGroups.unknownHighlight": "vim"
 }
