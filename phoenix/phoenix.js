@@ -62,7 +62,7 @@ guakeApp({
   appName: "Alacritty",
   position: topSixty,
   followsMouse: true,
-  hideOnBlur: true,
+  hideOnBlur: false,
 });
 guakeApp({
   key: "]",
