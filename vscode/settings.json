@@ -38,6 +38,9 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[azure-pipelines]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "vscode-edge-devtools.mirrorEdits": true,
     "vscode-edge-devtools.fallbackRevision": "@c8275fcfc2e02d5ca43c76374fa8200557b8712c",
     "[javascript]": {
@@ -54,7 +57,6 @@
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Dracula",
     "vscode-neovim.highlightGroups.ignoreHighlights": [
-
         "EndOfBuffer",
         "ErrorMsg",
         "MoreMsg",
@@ -114,7 +116,6 @@
         "FoldColumn"
     ],
     "vscode-neovim.highlightGroups.highlights": {
-
         "Directory": "vim",
         "IncSearch": {
             "backgroundColor": "theme.editor.findMatchBackground",
