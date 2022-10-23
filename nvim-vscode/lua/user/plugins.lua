@@ -48,6 +48,8 @@ return packer.startup(function(use)
   if vim.fn.exists('g:vscode') == 1 then
   --  use  'ChristianChiarulli/vscode-easymotion'
     use 'machakann/vim-highlightedyank'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-commentary'
   else  
     use "christoomey/vim-tmux-navigator"
     use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
