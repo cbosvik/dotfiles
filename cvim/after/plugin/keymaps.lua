@@ -61,3 +61,10 @@ keymap("x", "gx", "<Plug>(openbrowser-smart-search)", default_opts)
 
 -- focus.nvim
 keymap("n", "<C-w>z", "<Cmd>FocusMaxOrEqual<CR>", default_opts)
+
+-- Normal --
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
