@@ -131,5 +131,6 @@
         "Substitute": "vim"
     },
     "vscode-neovim.highlightGroups.unknownHighlight": "vim",
-    "window.zoomLevel": -2
+    "window.zoomLevel": -2,
+    "vsicons.dontShowNewVersionMessage": true
 }
