@@ -54,7 +54,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Tokyo Night Storm",
     "vscode-neovim.highlightGroups.ignoreHighlights": [
         "EndOfBuffer",
         "ErrorMsg",
@@ -131,6 +131,9 @@
         "Substitute": "vim"
     },
     "vscode-neovim.highlightGroups.unknownHighlight": "vim",
-    "window.zoomLevel": -2,
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": -2
 }
