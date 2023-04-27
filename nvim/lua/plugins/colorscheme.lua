@@ -5,7 +5,8 @@ return {
     opts = { colorscheme = "dracula" },
   },
   -- {
-  --   "folke/tokyonight.nvim",
-  --   opts = { style = "storm" },
+  -- "folke/tokyonight.nvim",
+  -- lazy = true,
+  -- opts = { style = "storm" },
   -- },
 }
