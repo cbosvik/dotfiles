@@ -7,6 +7,13 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "storm" },
+    opts = {
+      style = "storm",
+      terminal_colors = true,
+      styles = {
+        comments = { italic = true },
+        keywords = { italic = false },
+      },
+    },
   },
 }

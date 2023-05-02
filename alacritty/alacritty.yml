@@ -187,9 +187,9 @@ font:
 
     # Colors (Tomorrow Night)
 import:
-  - ~/.dotfiles/alacritty/themes/themes/dracula.yaml
+  - ~/.dotfiles/alacritty/themes/themes/tokyonight_storm.yaml
+  # - ~/.dotfiles/alacritty/themes/themes/dracula.yaml
   # - ~/.dotfiles/alacritty/themes/themes/campbell.yaml
-  # - ~/.dotfiles/alacritty/themes/themes/hyper.yaml
   #colors:
   # Default colors
   #primary:
