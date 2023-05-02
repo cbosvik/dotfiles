@@ -4,9 +4,9 @@ return {
     "LazyVim/LazyVim",
     opts = { colorscheme = "dracula" },
   },
-  -- {
-  -- "folke/tokyonight.nvim",
-  -- lazy = true,
-  -- opts = { style = "storm" },
-  -- },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "storm" },
+  },
 }
