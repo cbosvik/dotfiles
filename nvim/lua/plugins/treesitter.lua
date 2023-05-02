@@ -12,6 +12,13 @@ return {
           "scss",
           "sql",
           "vim",
+          "gitignore",
+          "gitcommit",
+          "gitattribute",
+          "git_rebase",
+          "lua",
+          "luadoc",
+          "python",
           "vue",
           "yaml",
         })
