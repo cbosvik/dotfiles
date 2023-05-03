@@ -14,7 +14,6 @@ return {
           "vim",
           "gitignore",
           "gitcommit",
-          "gitattribute",
           "git_rebase",
           "lua",
           "luadoc",

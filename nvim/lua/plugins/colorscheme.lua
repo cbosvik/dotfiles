@@ -1,5 +1,6 @@
 return {
   { "dracula/vim", name = "dracula" },
+  { "EdenEast/nightfox.nvim" },
   -- {
   --   "LazyVim/LazyVim",
   --   opts = { colorscheme = "dracula" },
