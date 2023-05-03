@@ -1,6 +1,6 @@
 {
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
     "editor.codeLensFontFamily": "FiraCode Nerd Font Mono",
     "editor.fontFamily": "FiraCode Nerd Font Mono",
     "redhat.telemetry.enabled": false,
