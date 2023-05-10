@@ -63,4 +63,12 @@ return {
       },
     },
   },
+  require("nvim-treesitter.configs").setup({
+    context_commentstring = {
+      enable = true,
+      config = {
+        c_sharp = "// %s",
+      },
+    },
+  }),
 }
