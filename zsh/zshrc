@@ -44,9 +44,9 @@ source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 # CVIM
-CVIM=~/.config/cvim
-export CVIM
-alias cvim='XDG_DATA_HOME=$CVIM/share XDG_CACHE_HOME=$CVIM XDG_CONFIG_HOME=$CVIM nvim'
+# CVIM=~/.config/cvim
+# export CVIM
+# alias cvim='XDG_DATA_HOME=$CVIM/share XDG_CACHE_HOME=$CVIM XDG_CONFIG_HOME=$CVIM nvim'
 
 # KinD
 export KIND_EXPERIMENTAL_PROVIDER=podman
