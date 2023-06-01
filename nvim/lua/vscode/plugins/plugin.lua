@@ -13,6 +13,7 @@ require("lazy").setup({
     {
       "tpope/vim-surround",
     },
+    -- { "machakann/vim-highlightedyank" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

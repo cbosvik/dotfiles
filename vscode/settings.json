@@ -1,8 +1,8 @@
 {
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.lua",
-    "editor.codeLensFontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.codeLensFontFamily": "Hack Nerd Font Mono",
+    "editor.fontFamily": "Hack Nerd Font Mono",
     "redhat.telemetry.enabled": false,
     "workbench.list.automaticKeyboardNavigation": false,
     /*"vsnotes.defaultNotePath": "/users/cb/code/home/notebook",
@@ -135,5 +135,15 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "window.zoomLevel": -2
+    "window.zoomLevel": -2,
+    "codeium.enableConfig": {
+        "*": true
+    },
+    "dataworkspace.excludedProjects": [
+
+    ],
+//     "editor.defaultFormatter": "esbenp.prettier-vscode",
+//     "[csharp]": {
+//         "editor.defaultFormatter": "ms-dotnettools.csharp"
+//   }
 }

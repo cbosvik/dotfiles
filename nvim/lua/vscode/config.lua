@@ -1,8 +1,20 @@
 require("vscode.plugins.keymap")
 require("vscode.plugins.plugin")
+
+local function augroup(name)
+  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+end
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup("highlight_yank"),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
 -- require("vscode.plugins.options")
 vim.cmd([[
-let g:highlightedyank_highlight_duration = 500
+" let g:highlightedyank_highlight_duration = 500
 
 function! s:split(...) abort
     let direction = a:1
