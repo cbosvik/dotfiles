@@ -27,3 +27,4 @@ export SKF=$CODEDIR/skf
 #export GOROOT="$(brew --prefix golang)/libexec"
 
 #export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+#. "$HOME/.cargo/env"

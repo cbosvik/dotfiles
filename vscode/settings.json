@@ -54,7 +54,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Tokyo Night Storm",
     "vscode-neovim.highlightGroups.ignoreHighlights": [
         "EndOfBuffer",
         "ErrorMsg",
@@ -142,6 +141,7 @@
     "dataworkspace.excludedProjects": [
 
     ],
+    "workbench.colorTheme": "Dracula",
 //     "editor.defaultFormatter": "esbenp.prettier-vscode",
 //     "[csharp]": {
 //         "editor.defaultFormatter": "ms-dotnettools.csharp"
