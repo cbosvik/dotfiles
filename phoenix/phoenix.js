@@ -54,6 +54,7 @@ const full = {
   bottom: 0,
 };
 const ALACRITTY_APP = 'Alacritty';
+const WEZTERM_APP = 'Wezterm';
 
 // the actual applications
 guakeApp({
@@ -102,7 +103,7 @@ guakeApp({
   appname: "Azuredatastudio",
   position: rightHalf,
   followsMouse: false,
-  hideOnBlur:false,
+  hideOnBlur: false,
 });
 /*guakeApp({
   key: "m",
@@ -154,7 +155,7 @@ function guakeApp({
   followsMouse,
   hideOnBlur,
 }) {
-  Key.on(key, modifiers, async function () {
+  Key.on(key, modifiers, async function() {
     let [app, opened] = await startApp(appName, { focus: false });
 
     // if the app started
