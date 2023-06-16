@@ -14,7 +14,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- config.default_prog = { "/opt/homebrew/bin/nu", "-l" },
+-- config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
 config.window_decorations = "RESIZE"
 config.inactive_pane_hsb = {
 	saturation = 0.8,
