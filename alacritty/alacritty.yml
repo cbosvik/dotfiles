@@ -196,7 +196,7 @@ import:
   - ~/.dotfiles/alacritty/themes/themes/tokyonight_storm.yaml
   # - ~/.dotfiles/alacritty/themes/themes/dracula.yaml
   # - ~/.dotfiles/alacritty/themes/themes/campbell.yaml
-  #colors:
+colors:
   # Default colors
   #primary:
   #  background: '#1d1f21'
@@ -217,9 +217,10 @@ import:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+
+  cursor:
+    text: '#ff9e64'
+    cursor: '#ff9e64'
 
   # Vi mode cursor colors
   #
