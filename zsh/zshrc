@@ -47,6 +47,9 @@ source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # starship
 eval "$(starship init zsh)"
 
+# atuin
+eval "$(atuin init zsh)"
+
 # CVIM
 # CVIM=~/.config/cvim
 # export CVIM

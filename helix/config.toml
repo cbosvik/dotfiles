@@ -1,0 +1,63 @@
+theme = "tokyonight"
+
+
+[editor]
+# Force the theme to show colors
+true-color = true
+# Highlight all lines with a cursor
+cursorline = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+# Number of lines of padding around the edge of the screen when scrolling
+scrolloff = 10
+# Show currently open buffers, only when more than one exists.
+bufferline = "multiple"
+# Use mouse
+mouse = true
+#absolute line numbers
+line-number = "absolute"
+#relative line numbers
+#line-number = "relative"
+#Enable automatic formatting on save
+auto-format = true
+#show rulers
+rulers = [80, 120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+
+[editor.file-picker]
+hidden = false
+parents = false
+git-ignore = false
+
+[editor.whitespace]
+render = "all"
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[keys.normal]
+# Use system clipboard
+# Not needed prepend y or p with <space>
+# y = "yank_main_selection_to_clipboard"
+# p = "paste_clipboard_before"
+
