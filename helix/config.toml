@@ -1,4 +1,4 @@
-theme = "tokyonight"
+theme = "hakefjord"
 
 
 [editor]
@@ -60,4 +60,6 @@ j = { k = "normal_mode" }
 # Not needed prepend y or p with <space>
 # y = "yank_main_selection_to_clipboard"
 # p = "paste_clipboard_before"
-
+[keys.normal.backspace]
+a = ":set line-number absolute"
+r = ":set line-number relative"
