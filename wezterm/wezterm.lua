@@ -21,6 +21,9 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 config.color_scheme = "tokyonight_storm"
+config.colors = {
+	cursor_bg = 'orange',
+}
 config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 14
 config.line_height = 1.2
