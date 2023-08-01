@@ -55,3 +55,13 @@ name = "source"
 request = "launch"
 completion = [ { name = "main", completion = "filename", default = "index.js" } ]
 args = { program = "{0}" }
+
+[[language]]
+name = "markdown"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+
