@@ -1,6 +1,6 @@
 eval $(/opt/homebrew/bin/brew shellenv)
 # Add .NET Core SDK tools
-export PATH="$PATH:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin"
+export PATH="$PATH:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin:/Users/cb/go/bin"
 # helix search
 hxs() {
 	RG_PREFIX="rg -i --files-with-matches"
