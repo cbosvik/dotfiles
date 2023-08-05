@@ -398,7 +398,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Beam
+    shape: Block
     # Cursor blinking state
     #
     # Values for `blinking`:
@@ -444,7 +444,8 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach -t base || tmux new -s base"
+    - "zellij attach base || zellij attach -c base"
+    # - "tmux attach -t base || tmux new -s base"
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working

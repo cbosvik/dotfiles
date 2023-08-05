@@ -34,6 +34,7 @@ export KUBECONFIG=$HOME/.kube/config
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml
 export STARSHIP_CONFIG=~/.config/zsh/starship.toml
+export ZELLIJ_AUTO_ATTACH=true
 
 eval $(thefuck --alias)
 
@@ -49,11 +50,6 @@ eval "$(starship init zsh)"
 
 # atuin
 eval "$(atuin init zsh)"
-
-# CVIM
-# CVIM=~/.config/cvim
-# export CVIM
-# alias cvim='XDG_DATA_HOME=$CVIM/share XDG_CACHE_HOME=$CVIM XDG_CONFIG_HOME=$CVIM nvim'
 
 # KinD
 export KIND_EXPERIMENTAL_PROVIDER=podman
