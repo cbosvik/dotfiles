@@ -6,6 +6,17 @@
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
 # https://github.com/nushell/nu_scripts/tree/main/themes
+alias kctx = kubectx
+alias kns = kubens
+alias k = kubectl
+alias kga = kubectl get all
+alias kgans = kubectl get all --all-namespaces
+alias ssh = TERM = xterm-256color ssh
+# alias brewup = brew update; brew upgrade; brew cleanup; brew doctor
+alias docker = podman
+alias docker-compose = podman-compose
+alias ll = ls -lah
+# alias els = "exa --long --git --icons --color = always --group-directories-first"
 let dark_theme = {
     # color for nushell primitives
     separator: white
@@ -183,9 +194,9 @@ let light_theme = {
 
 
 # The default config record. This is where much of your global configuration is setup.
-let-env config = {
+$env.config = {
   # true or false to enable or disable the welcome banner at startup
-  show_banner: true
+  show_banner: false
   ls: {
     use_ls_colors: true # use the LS_COLORS environment variable to colorize output
     clickable_links: true # enable or disable clickable links. Your terminal has to support links.
@@ -198,7 +209,7 @@ let-env config = {
   }
   table: {
     mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
-    index_mode: always # "always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
+    index_mode: always # always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
     show_empty: true # show 'empty list' and 'empty record' placeholders for command output
     trim: {
       methodology: wrapping # wrapping or truncating

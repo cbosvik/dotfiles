@@ -18,6 +18,7 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias docker='podman'
 alias docker-compose='podman-compose'
 alias ll='ls -lah'
+alias els='exa --long --git --icons --color=always --group-directories-first'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export NVM_DIR="$HOME/.nvm"
@@ -26,16 +27,13 @@ export NVM_DIR="$HOME/.nvm"
 export KUBECONFIG=$HOME/.kube/config
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml
-#export STARSHIP_CONFIG=~/.config/zsh/starship.toml
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
-
+export TERM=alacritty
 eval $(thefuck --alias)
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
 # starship
 eval "$(starship init zsh)"

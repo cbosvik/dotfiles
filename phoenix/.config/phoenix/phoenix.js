@@ -84,60 +84,11 @@ guakeApp({
 guakeApp({
   key: "¨",
   modifiers: ["cmd"],
-  appName: "Alacritty",
+  appName: "Wezterm",
   position: full,
   followsMouse: true,
   hideOnBlur: true,
 });
-guakeApp({
-  key: "c",
-  modifiers: ["ctrl", "shift"],
-  appName: "Code",
-  position: full,
-  followsMouse: false,
-  hideOnBlur: false,
-});
-guakeApp({
-  key: "a",
-  modifiers: ["ctrl", "shift"],
-  appname: "Azuredatastudio",
-  position: rightHalf,
-  followsMouse: false,
-  hideOnBlur: false,
-});
-/*guakeApp({
-  key: "m",
-  modifiers: ["alt"],
-  appName: "Messages",
-  position: lowerLeftHalf,
-  followsMouse: true,
-  hideOnBlur: false,
-});
-guakeApp({
-  key: "p",
-  modifiers: ["alt"],
-  appName: "Spotify",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: false,
-});
-guakeApp({
-  key: "r",
-  modifiers: ["alt"],
-  appName: "Roam Research",
-  position: rightHalf,
-  followsMouse: true,
-  hideOnBlur: false,
-});
-guakeApp({
-  key: "c",
-  modifiers: ["alt"],
-  appName: "Code",
-  position: rightHalf,
-  followsMouse: false,
-  hideOnBlur: false,
-});
-*/
 /**
  *
  * @param {string} key the key which triggers the app
