@@ -11,12 +11,12 @@ alias kns = kubens
 alias k = kubectl
 alias kga = kubectl get all
 alias kgans = kubectl get all --all-namespaces
-alias ssh = TERM = xterm-256color ssh
+# alias ssh = TERM = xterm-256color ssh
 # alias brewup = brew update; brew upgrade; brew cleanup; brew doctor
 alias docker = podman
 alias docker-compose = podman-compose
-alias ll = ls -lah
-# alias els = "exa --long --git --icons --color = always --group-directories-first"
+alias ll = lsd -lah
+# alias els = exa --long --git --icons --color=always --group-directories-first
 let dark_theme = {
     # color for nushell primitives
     separator: white

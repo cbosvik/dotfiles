@@ -1,12 +1,4 @@
 [[language]]
-name = "python"
-roots = ["pyproject.toml"]
-formatter = { command = "black", args = ["--quiet", "-"] }
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-config = {} 
-auto-format = true
-
-[[language]]
 name = "rust"
 scope = "source.rust"
 injection-regex = "rust"
@@ -16,6 +8,9 @@ auto-format = true
 comment-token = "//"
 language-server = { command = "rust-analyzer" }
 indent = { tab-width = 4, unit = "	" }
+
+[language.config]
+checkOnSave = { command = "clippy"}
 
 # [language.debugger]
 # name = "lldb-vscode"
@@ -27,37 +22,18 @@ indent = { tab-width = 4, unit = "	" }
 command = "clippy"
 
 [[language]]
-name = "typescript"
-auto-format = true
-# pass format options according to https://github.com/typescript-language-server/typescript-language-server#workspacedidchangeconfiguration omitting the "[language].format." prefix.
-config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
 
 [[language]]
-name = "javascript"
-scope = "source.js"
-injection-regex = "(js|javascript)"
-file-types = ["js", "mjs", "cjs"]
-shebangs = ["node"]
-roots = []
-comment-token = "//"
-language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "javascript" }
-indent = { tab-width = 2, unit = "  " }
-
-[language.debugger]
-name = "node-debug2"
-command = "node"
-transport = "stdio"
-quirks = { absolute-paths = true }
-args = ["/home/alpha2phi/workspace/temp/vscode-node-debug2/out/src/nodeDebug.js"]
-
-[[language.debugger.templates]]
-name = "source"
-request = "launch"
-completion = [ { name = "main", completion = "filename", default = "index.js" } ]
-args = { program = "{0}" }
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+auto-format = true
 
 [[language]]
 name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
 
 [language.auto-pairs]
 '(' = ')'
@@ -65,3 +41,37 @@ name = "markdown"
 '[' = ']'
 '"' = '"'
 
+[[language]]
+name = "bash"
+formatter = { command = 'shfmt', args = ["-i", "4"] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+
+[[language]]
+name = "c-sharp"
+roots = ["csproj", "sln"]
+indent = { tab-width = 4, unit = "    " }
+language-server = { command = "dotnet", args = [ "/Users/cb/.omnisharp/Omnisharp.dll", "--languageserver" ] }
+
+[[language]]
+name = "javascript"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+auto-format = true

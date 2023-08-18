@@ -29,7 +29,8 @@ export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfi
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
-export TERM=alacritty
+export TERM=xterm-256color
+# export TERM=alacritty
 eval $(thefuck --alias)
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

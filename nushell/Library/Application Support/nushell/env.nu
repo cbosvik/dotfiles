@@ -2,61 +2,7 @@
 #
 # version = 0.82.0
 
-# set PATH
-# let-env PATH = "/Users/cb/.nvm/versions/node/v16.14.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin:/Users/cb/go/bin"
-
-# def create_left_prompt [] {
-#     mut home = ""
-#     try {
-#         if $nu.os-info.name == "windows" {
-#             $home = $env.USERPROFILE
-#         } else {
-#             $home = $env.HOME
-#         }
-#     }
-
-#     let dir = ([
-#         ($env.PWD | str substring 0..($home | str length) | str replace --string $home "~"),
-#         ($env.PWD | str substring ($home | str length)..)
-#     ] | str join)
-
-#     let path_color = (if (is-admin) { ansi red_bold } else { ansi green_bold })
-#     let separator_color = (if (is-admin) { ansi light_red_bold } else { ansi light_green_bold })
-#     let path_segment = $"($path_color)($dir)"
-
-#     $path_segment | str replace --all --string (char path_sep) $"($separator_color)/($path_color)"
-# }
-
-# def create_right_prompt [] {
-#     let time_segment_color = (ansi magenta)
-
-#     let time_segment = ([
-#         (ansi reset)
-#         $time_segment_color
-#         (date now | date format '%m/%d/%Y %r')
-#     ] | str join | str replace --all "([/:])" $"(ansi light_magenta_bold)${1}($time_segment_color)" |
-#         str replace --all "([AP]M)" $"(ansi light_magenta_underline)${1}")
-
-#     let last_exit_code = if ($env.LAST_EXIT_CODE != 0) {([
-#         (ansi rb)
-#         ($env.LAST_EXIT_CODE)
-#     ] | str join)
-#     } else { "" }
-
-#     ([$last_exit_code, (char space), $time_segment] | str join)
-# }
-
-# Use nushell functions to define your right and left prompt
-# $env.PROMPT_COMMAND = {|| create_left_prompt }
-# $env.PROMPT_COMMAND_RIGHT = {|| create_right_prompt }
-
-# The prompt indicators are environmental variables that represent
-# the state of the prompt
-# $env.PROMPT_INDICATOR = {|| "> " }
-# $env.PROMPT_INDICATOR_VI_INSERT = {|| ": " }
-# $env.PROMPT_INDICATOR_VI_NORMAL = {|| "> " }
-# $env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
-
+$env.PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Users/cb/.dotnet/tools:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin:/Users/cb/go/bin:/Users/cb/.nvm/versions/node/v16.14.0/bin/'
 
 $env.STARSHIP_SHELL = "nu"
 
@@ -109,4 +55,17 @@ $env.VISUAL = "hx"
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
-$env.TERM = alacritty
+$env.TERM = xterm-256color
+
+$env.CODEDIR = '/Users/cb/code'
+$env.DOTFILES = '/Users/cb/.dotfiles'
+$env.GOPATH = '/Users/cb/go'
+$env.HOMEBREW_CELLAR = '/opt/homebrew/Cellar'
+$env.HOMEBREW_PREFIX = '/opt/homebrew'
+$env.HOMEBREW_REPOSITORY = '/opt/homebrew'
+$env.KUBECONFIG = '/Users/cb/.kube/config:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml'
+$env.NVIMDIR = '/Users/cb/.config/nvim'
+$env.SKF = '/Users/cb/code/skf'
+$env.XDG_CACHE_HOME = '/Users/cb/.cache'
+$env.XDG_CONFIG_HOME = '/Users/cb/.config'
+$env.XDG_DATA_HOME = '/Users/cb/.local/share'

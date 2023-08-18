@@ -53,8 +53,8 @@ const full = {
   right: 0,
   bottom: 0,
 };
-const ALACRITTY_APP = 'Alacritty';
-const WEZTERM_APP = 'Wezterm';
+const ALACRITTY_APP = "Alacritty";
+const WEZTERM_APP = "Wezterm";
 
 // the actual applications
 guakeApp({
@@ -84,13 +84,12 @@ guakeApp({
 guakeApp({
   key: "¨",
   modifiers: ["cmd"],
-  appName: "Wezterm",
+  appName: "Alacritty",
   position: full,
   followsMouse: true,
   hideOnBlur: true,
 });
 /**
- *
  * @param {string} key the key which triggers the app
  * @param {string[]} modifiers the modifiers which must be used in combination with the key (["alt", "ctrl"])
  * @param {string} appName the name of the app
@@ -106,7 +105,7 @@ function guakeApp({
   followsMouse,
   hideOnBlur,
 }) {
-  Key.on(key, modifiers, async function() {
+  Key.on(key, modifiers, async function () {
     let [app, opened] = await startApp(appName, { focus: false });
 
     // if the app started
@@ -159,8 +158,8 @@ function setAppPosition(app, relativeFrame, space) {
     const left = screen.x + relativeFrame.left * screen.width;
     const top = screen.y + relativeFrame.top * screen.height;
     const right = screen.x + screen.width - relativeFrame.right * screen.width;
-    const bottom =
-      screen.y + screen.height - relativeFrame.bottom * screen.height;
+    const bottom = screen.y + screen.height -
+      relativeFrame.bottom * screen.height;
     mainWindow.setTopLeft({
       x: left,
       y: top,
@@ -287,7 +286,8 @@ function screenContainsPoint(screen, point) {
 /**
  * Error message for invalid display settings
  */
-const DISPLAYS_HAVE_SEPARATE_SPACES = `Must set Apple menu > System Preferences > Mission Control > Displays have Separate Spaces`;
+const DISPLAYS_HAVE_SEPARATE_SPACES =
+  `Must set Apple menu > System Preferences > Mission Control > Displays have Separate Spaces`;
 
 // Finding Application Names
 // to find application names run the following command
