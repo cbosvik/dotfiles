@@ -65,14 +65,14 @@ guakeApp({
   followsMouse: true,
   hideOnBlur: false,
 });
-guakeApp({
-  key: "]",
-  modifiers: ["cmd"],
-  appName: "Alacritty",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: true,
-});
+// guakeApp({
+//   key: "]",
+//   modifiers: ["cmd"],
+//   appName: "Alacritty",
+//   position: full,
+//   followsMouse: true,
+//   hideOnBlur: true,
+// });
 guakeApp({
   key: "´",
   modifiers: ["cmd"],
@@ -81,14 +81,14 @@ guakeApp({
   followsMouse: true,
   hideOnBlur: true,
 });
-guakeApp({
-  key: "¨",
-  modifiers: ["cmd"],
-  appName: "Alacritty",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: true,
-});
+// guakeApp({
+//   key: "¨",
+//   modifiers: ["cmd"],
+//   appName: "Alacritty",
+//   position: full,
+//   followsMouse: true,
+//   hideOnBlur: true,
+// });
 /**
  * @param {string} key the key which triggers the app
  * @param {string[]} modifiers the modifiers which must be used in combination with the key (["alt", "ctrl"])
@@ -105,7 +105,7 @@ function guakeApp({
   followsMouse,
   hideOnBlur,
 }) {
-  Key.on(key, modifiers, async function () {
+  Key.on(key, modifiers, async function() {
     let [app, opened] = await startApp(appName, { focus: false });
 
     // if the app started
