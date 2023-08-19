@@ -1,4 +1,4 @@
-hs.hotkey.bind({ "cmd" }, "]", function()
+hs.hotkey.bind({ "cmd" }, "=", function()
 	wez = hs.application.find("Wezterm")
 	-- print(wez)
 	if wez == nil then
