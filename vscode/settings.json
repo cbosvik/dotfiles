@@ -725,4 +725,151 @@
         }
     },
     "editor.fontSize": 13,
+    "terminal.external.osxExec": "wezterm",
+    "terminal.integrated.profiles.osx": {
+        "bash": {
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
+        },
+        "fish": {
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        },
+    },
+    "dance.modes": {
+        "": {
+            "hiddenSelectionsIndicatorsDecoration": {
+                "after": {
+                    "color": "$list.warningForeground"
+                },
+                "backgroundColor": "$inputValidation.warningBackground",
+                "borderColor": "$inputValidation.warningBorder",
+                "borderStyle": "solid",
+                "borderWidth": "1px",
+                "isWholeLine": true
+            }
+        },
+        "input": {
+            "cursorStyle": "underline-thin"
+        },
+        "insert": {
+            "onLeaveMode": [
+                [
+                    ".selections.save",
+                    {
+                        "register": " insert"
+                    }
+                ]
+            ]
+        },
+        "visual": {
+            "lineNumbers": "relative",
+            "cursorStyle": "underline",
+            "selectionBehavior": "character",
+            "onEnterMode": [
+                [
+                    ".selections.restore",
+                    {
+                        "register": " ^",
+                        "try": true
+                    }
+                ]
+            ],
+            "onLeaveMode": [
+                [
+                    ".selections.save",
+                    {
+                        "register": " ^",
+                        "style": {
+                            "borderColor": "$editor.selectionBackground",
+                            "borderStyle": "solid",
+                            "borderWidth": "2px",
+                            "borderRadius": "1px"
+                        },
+                        "until": [
+                            [
+                                "mode-did-change",
+                                {
+                                    "include": "normal"
+                                }
+                            ],
+                            [
+                                "mode-did-change",
+                                {
+                                    "include": "visual"
+                                }
+                            ],
+                            [
+                                "selections-did-change"
+                            ]
+                        ]
+                    }
+                ]
+            ]
+        },
+        "normal": {
+            "lineNumbers": "relative",
+            "cursorStyle": "block",
+            "selectionBehavior": "character",
+            "onEnterMode": [
+                [
+                    ".selections.restore",
+                    {
+                        "register": " ^",
+                        "try": true
+                    }
+                ]
+            ],
+            "onLeaveMode": [
+                [
+                    ".selections.save",
+                    {
+                        "register": " ^",
+                        "style": {
+                            "borderColor": "$editor.selectionBackground",
+                            "borderStyle": "solid",
+                            "borderWidth": "2px",
+                            "borderRadius": "1px"
+                        },
+                        "until": [
+                            [
+                                "mode-did-change",
+                                {
+                                    "include": "normal"
+                                }
+                            ],
+                            [
+                                "mode-did-change",
+                                {
+                                    "include": "visual"
+                                }
+                            ],
+                            [
+                                "selections-did-change"
+                            ]
+                        ]
+                    }
+                ]
+            ]
+        }
+    },
 }

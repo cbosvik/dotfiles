@@ -16,6 +16,7 @@ alias kgans = kubectl get all --all-namespaces
 alias docker = podman
 alias docker-compose = podman-compose
 alias ll = lsd -lah
+alias ls = ls -a
 # alias els = exa --long --git --icons --color=always --group-directories-first
 let dark_theme = {
     # color for nushell primitives

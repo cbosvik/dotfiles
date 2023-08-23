@@ -11,3 +11,12 @@ hs.hotkey.bind({ "cmd" }, "=", function()
 		end
 	end
 end)
+
+hs.hotkey.bind({ "cmd" }, "]", function()
+	vscode = hs.application.find("Code")
+	if vscode:isFrontmost() then
+		vscode:hide()
+	else
+		vscode:activate()
+	end
+end)

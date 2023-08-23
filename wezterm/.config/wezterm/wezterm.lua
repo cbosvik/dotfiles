@@ -14,7 +14,8 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
+-- config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
+config.default_cursor_style = "SteadyBlock"
 config.window_decorations = "RESIZE"
 config.inactive_pane_hsb = {
 	saturation = 0.8,
@@ -36,24 +37,10 @@ config.window_frame = {
 	font = wezterm.font({ family = "Noto Sans", weight = "Regular" }),
 }
 
-config.disable_default_key_bindings = true
+-- config.disable_default_key_bindings = true
 
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
-	-- panes
-	{ key = "h", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-	{ key = "v", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
-	{ key = "h", mods = "SUPER", action = act.ActivatePaneDirection("Left") },
-	{ key = "j", mods = "SUPER", action = act.ActivatePaneDirection("Down") },
-	{ key = "k", mods = "SUPER", action = act.ActivatePaneDirection("Up") },
-	{ key = "l", mods = "SUPER", action = act.ActivatePaneDirection("Right") },
-	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
-	-- tabs
-	{ key = "L", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(1) },
-	{ key = "H", mods = "SUPER|SHIFT", action = act.ActivateTabRelative(-1) },
-	{ key = "t", mods = "SUPER", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "w", mods = "SUPER", action = act.CloseCurrentTab({ confirm = true }) },
 	-- copy paste
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
 	{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
@@ -61,11 +48,48 @@ config.keys = {
 	{ key = "c", mods = "CTRL|SHIFT", action = act.CopyTo("Clipboard") },
 	-- misc
 	{ key = "r", mods = "LEADER", action = act.ActivateKeyTable({ name = "resize_pane", one_shot = false }) },
+  { key = "t", mods = "LEADER", action = act.ActivateKeyTable({ name = "activate_tab" }), timeout_milliseconds = 1000 },
+  -- { key = "p", mods = "LEADER", action = act.ActivateKeyTable({ name = "activate_pane" }), timeout_milliseconds = 1000 },
 	{ key = "-", mods = "SUPER", action = act.DecreaseFontSize },
 	{ key = "+", mods = "SUPER", action = act.IncreaseFontSize },
 	{ key = "0", mods = "SUPER", action = act.ResetFontSize },
 	{ key = "P", mods = "SUPER|SHIFT", action = act.ActivateCommandPalette },
 	{ key = "L", mods = "CTRL|SHIFT", action = act.ShowDebugOverlay },
+
+
+	{ key = "i", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "v", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "x", mods = "LEADER", action = act.CloseCurrentPane({ confirm = true }) },
+	{ key = "h", mods = "LEADER", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "LEADER", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
+	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
 }
 
+config.key_tables = {
+	resize_pane = {
+    { key = 'h', action = act.AdjustPaneSize { 'Left', 1 } },
+    { key = 'l', action = act.AdjustPaneSize { 'Right', 1 } },
+    { key = 'k', action = act.AdjustPaneSize { 'Up', 1 } },
+    { key = 'j', action = act.AdjustPaneSize { 'Down', 1 } },
+    -- Cancel the mode by pressing escape
+    { key = 'Escape', action = 'PopKeyTable' },	},
+	-- activate_pane = {
+	-- { key = "i", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	-- { key = "v", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	-- { key = "x", action = act.CloseCurrentPane({ confirm = true }) },
+	-- { key = "h", action = act.ActivatePaneDirection("Left") },
+	-- { key = "j", action = act.ActivatePaneDirection("Down") },
+	-- { key = "k", action = act.ActivatePaneDirection("Up") },
+	-- { key = "l", action = act.ActivatePaneDirection("Right") },
+	-- { key = "z", action = act.TogglePaneZoomState },
+	-- },
+	activate_tab = {
+	{ key = "l", action = act.ActivateTabRelative(1) },
+	{ key = "h", action = act.ActivateTabRelative(-1) },
+	{ key = "n", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = "x", action = act.CloseCurrentTab({ confirm = true }) },
+	}
+}
 return config

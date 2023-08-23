@@ -2,7 +2,7 @@
 #
 # version = 0.82.0
 
-$env.PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Users/cb/.dotnet/tools:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin:/Users/cb/go/bin:/Users/cb/.nvm/versions/node/v16.14.0/bin/'
+$env.PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Users/cb/.dotnet/tools:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/cb/.dotnet/tools:/Users/cb/.cargo/bin:/Users/cb/go/bin:/Users/cb/.nvm/versions/node/v16.14.0/bin/:/opt/homebrew/opt/llvm/bin'
 
 $env.STARSHIP_SHELL = "nu"
 

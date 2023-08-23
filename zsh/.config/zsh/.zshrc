@@ -15,9 +15,7 @@ alias kga="kubectl get all"
 alias kgans="kubectl get all --all-namespaces"
 alias ssh='TERM=xterm-256color ssh'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
-alias docker='podman'
-alias docker-compose='podman-compose'
-alias ll='ls -lah'
+alias ls='lsd -ah'
 alias els='exa --long --git --icons --color=always --group-directories-first'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -30,8 +28,7 @@ export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfi
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
 export TERM=xterm-256color
-# export TERM=alacritty
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

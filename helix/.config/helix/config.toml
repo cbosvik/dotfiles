@@ -2,24 +2,13 @@ theme = "hakefjord_storm"
 
 
 [editor]
-# Force the theme to show colors
 true-color = true
-# Highlight all lines with a cursor
 cursorline = true
 gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
-# Number of lines of padding around the edge of the screen when scrolling
-scrolloff = 10
-# Show currently open buffers, only when more than one exists.
 bufferline = "multiple"
-# Use mouse
 mouse = true
-#absolute line numbers
 line-number = "relative"
-#relative line numbers
-#line-number = "relative"
-#Enable automatic formatting on save
 auto-format = true
-#show rulers
 rulers = [80, 120]
 
 [editor.cursor-shape]
@@ -32,8 +21,8 @@ display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control", "file-name"]
-center = []
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
@@ -52,15 +41,27 @@ git-ignore = false
 [editor.whitespace]
 render = "all"
 
+[editor.soft-wrap]
+enable = true
+
 [keys.insert]
 # escape insert mode with jk
 j = { k = "normal_mode" }
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
 
 [keys.normal]
 # C-g = ":sh tmux popup -d \"#{pane_current_path}\" -xC -yC -w80% -h80% -E gitui"
 # Config changes
 C-o = ":config-open"
 C-r = ":config-reload"
+
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
 
 # Personal preference
 o = ["open_below", "normal_mode"]
@@ -81,13 +82,13 @@ C-l = "select_next_sibling"
 G = "goto_file_end"
 "%" = "match_brackets"
 V = ["select_mode", "extend_to_line_bounds"]
-C = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
-D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection"]
-S = "surround_add" # Would be nice to be able to do something after this but it isn't chainable
+# C = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
+# D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection"]
 
 # i = ["insert_mode", "collapse_selection"]
 # a = ["append_mode", "collapse_selection"]
-
+A-k = "copy_selection_on_prev_line"
+A-j = "copy_selection_on_next_line"
 [keys.normal.backspace]
 a = ":set line-number absolute"
 r = ":set line-number relative"
@@ -100,8 +101,8 @@ r = ":set line-number relative"
 "$" = "goto_line_end"
 "^" = "goto_first_nonwhitespace"
 G = "goto_file_end"
-D = ["extend_to_line_bounds", "delete_selection", "normal_mode"]
-C = ["goto_line_start", "extend_to_line_bounds", "change_selection"]
+# D = ["extend_to_line_bounds", "delete_selection", "normal_mode"]
+# C = ["goto_line_start", "extend_to_line_bounds", "change_selection"]
 "%" = "match_brackets"
 S = "surround_add" # Basically 99% of what I use vim-surround for
 
