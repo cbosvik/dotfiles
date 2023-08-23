@@ -41,3 +41,6 @@ eval "$(atuin init zsh)"
 
 # KinD
 export KIND_EXPERIMENTAL_PROVIDER=podman
+
+# Zoxide
+eval "$(zoxide init zsh)"
