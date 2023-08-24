@@ -17,6 +17,11 @@ alias ssh='TERM=xterm-256color ssh'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias ls='lsd -ah'
 alias els='exa --long --git --icons --color=always --group-directories-first'
+alias cat="bat"
+alias gP="git push"
+alias gp="git pull"
+alias ga="git add"
+alias gc="git commit -m"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export NVM_DIR="$HOME/.nvm"
@@ -28,7 +33,7 @@ export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfi
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
 export TERM=xterm-256color
-# eval $(thefuck --alias)
+eval $(thefuck --alias)
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
