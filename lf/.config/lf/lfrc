@@ -1,0 +1,7 @@
+set shell sh
+set shellopts '-eu'
+set icons true
+set scrolloff 10
+set ifs "\n"
+set cursorpreviewfmt "\033[7;2m"
+map <enter> shell
