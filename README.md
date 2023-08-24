@@ -32,7 +32,8 @@ brew install \
   kubeseal \
   helm \
   kubelogin \
-  httpie \
+  // httpie \
+  xh \
   k9s \
   mc \
   marksman \
