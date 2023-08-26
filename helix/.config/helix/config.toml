@@ -56,6 +56,17 @@ C-f = [":new", ":insert-output lfp", "split_selection_on_newline", "goto_file", 
 a = ":set line-number absolute"
 r = ":set line-number relative"
 
+
+[keys.normal.";"]
+b = ":sh hx-wezterm.sh blame"
+e = ":sh hx-wezterm.sh explorer"
+f = ":sh hx-wezterm.sh fzf"
+g = ":sh hx-wezterm.sh lazygit"
+o = ":sh hx-wezterm.sh open"
+r = ":sh hx-wezterm.sh run"
+s = ":sh hx-wezterm.sh test_single"
+t = ":sh hx-wezterm.sh test_all"
+
 [keys.select]
 k = ["extend_line_up", "extend_to_line_bounds"]
 j = ["extend_line_down", "extend_to_line_bounds"]

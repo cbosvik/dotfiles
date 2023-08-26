@@ -563,3 +563,5 @@ $env.config = {
     }
   ]
 }
+
+source /Users/cb/.config/broot/launcher/nushell/br

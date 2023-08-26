@@ -33,7 +33,7 @@ export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfi
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
 export TERM=xterm-256color
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -49,3 +49,5 @@ export KIND_EXPERIMENTAL_PROVIDER=podman
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+source /Users/cb/.config/broot/launcher/bash/br
