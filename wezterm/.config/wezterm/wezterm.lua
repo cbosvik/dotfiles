@@ -67,30 +67,39 @@ config.keys = {
 	{ key = "k", mods = "LEADER", action = act.ActivatePaneDirection("Up") },
 	{ key = "l", mods = "LEADER", action = act.ActivatePaneDirection("Right") },
 	{ key = "z", mods = "LEADER", action = act.TogglePaneZoomState },
+  {
+        key = "[",
+        mods = "LEADER",
+        action = act.Multiple {
+          act.ActivatePaneDirection "Up",
+          act.EmitEvent "reload-helix",
+        }
+      },
 	{
-		     key = 's',
-		     mods = 'CMD|SHIFT',
+		     key = "s",
+		     mods = "LEADER",
 		     action = wezterm.action.QuickSelectArgs {
-		      label = 'open url',
+		      label = "open url",
 					patterns = {
-			        'https?://\\S+',
-			        '^/[^/\r\n]+(?:/[^/\r\n]+)*:\\d+:\\d+',
-			        '[^\\s]+\\.rs:\\d+:\\d+',
-			        'rustc --explain E\\d+',
-			      },	       action = wezterm.action_callback(function(window, pane)
+			        "https?://\\S+",
+			        "^/[^/\r\n]+(?:/[^/\r\n]+)*:\\d+:\\d+",
+			        "[^\\s]+\\.rs:\\d+:\\d+",
+			        "rustc --explain E\\d+",
+			      },
+            action = wezterm.action_callback(function(window, pane)
 		        local selection = window:get_selection_text_for_pane(pane)
-		        wezterm.log_info('opening: ' .. selection)
+		        wezterm.log_info("opening: " .. selection)
 		        if startswith(selection, "http") then
 		          wezterm.open_with(selection)
 		        elseif startswith(selection, "rustc --explain") then
 							local action = wezterm.action{
 		             SplitPane={
-		               direction = 'Right',
+		               direction = "Right",
 		               command = {
 		                 args = {
-		                   '/bin/sh',
-		                   '-c',
-		                   'rustc --explain ' .. selection:match("(%S+)$") .. ' | mdcat -p',
+		                   "/bin/sh",
+		                   "-c",
+		                   "rustc --explain " .. selection:match("(%S+)$") .. " | mdcat -p",
 		                 },
 		              },
 		            };
