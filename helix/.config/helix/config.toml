@@ -57,7 +57,7 @@ a = ":set line-number absolute"
 r = ":set line-number relative"
 
 
-[keys.normal.";"]
+[keys.normal."+"]
 b = ":sh hx-wezterm.sh blame"
 e = ":sh hx-wezterm.sh explorer"
 f = ":sh hx-wezterm.sh fzf"

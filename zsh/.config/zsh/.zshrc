@@ -30,6 +30,11 @@ export NVM_DIR="$HOME/.nvm"
 export KUBECONFIG=$HOME/.kube/config
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml
 export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml
+export KUBECONFIG=$KUBECONFIG:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/k3s.yaml
+
+# export KUBECONFIG=$HOME/.kube/config:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml:$HOME/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml kubectl config view --flatten > config.tmp && mv config.tmp ~/.kube/config
+# export KUBECONFIG=$HOME/.kube/config
+
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 export ZELLIJ_AUTO_ATTACH=true
 export TERM=xterm-256color
