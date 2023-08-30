@@ -40,6 +40,9 @@ brew install \
   mc \
   marksman \
   llvm \
+  docker \
+  docker-compose \
+  colima \
   slides
 
 
@@ -51,4 +54,10 @@ brew install --cask alacritty
 // brew install --cask phoenix
 brew install --cask podman-desktop
 brew install --cask hammerspoon
+```
+
+## Docker
+
+```bash
+colima start --arch aarch64 --vm-type=vz --vz-rosetta
 ```
