@@ -50,7 +50,7 @@ eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 
 # KinD
-export KIND_EXPERIMENTAL_PROVIDER=podman
+# export KIND_EXPERIMENTAL_PROVIDER=podman
 
 # Zoxide
 eval "$(zoxide init zsh)"
