@@ -7,6 +7,8 @@ Clone the repo to ~/.dotfiles
 ```bash
 brew install \
   bat \
+  jless \
+  pastel \
   mdcat \
   broot \
   lsd \
