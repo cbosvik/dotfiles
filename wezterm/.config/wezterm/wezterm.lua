@@ -23,7 +23,7 @@ config.inactive_pane_hsb = {
 	brightness = 0.7,
 }
 config.quit_when_all_windows_are_closed = true
-config.color_scheme = "tokyonight_storm"
+config.color_scheme = "tokyonight"
 config.colors = {
 	cursor_bg = "orange",
 }
