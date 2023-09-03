@@ -41,7 +41,7 @@ config.window_frame = {
 
 -- config.disable_default_key_bindings = true
 
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	-- copy paste
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },

@@ -4,7 +4,7 @@ Clone the repo to ~/.dotfiles
 
 # useful utilities
 
-```bash
+```
 brew install \
   bat \
   jless \
@@ -12,6 +12,7 @@ brew install \
   mdcat \
   broot \
   lsd \
+  hurl \
   atuin \
   helix \
   ripgrep \
@@ -50,7 +51,7 @@ brew install \
 
 ```
 
-```bash
+```
 brew install --cask wezterm
 brew install --cask alacritty
 // brew install --cask phoenix
@@ -60,6 +61,6 @@ brew install --cask hammerspoon
 
 ## Docker
 
-```bash
+```
 colima start --arch aarch64 --vm-type=vz --vz-rosetta
 ```

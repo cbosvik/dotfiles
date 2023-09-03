@@ -15,7 +15,7 @@ return {
     event = "VeryLazy",
     opts = {
       defaults = {
-        ["<leader>lc"] = { name = "+Crates" },
+        ["<leader>rc"] = { name = "+Crates" },
       },
     },
   },
@@ -62,10 +62,10 @@ return {
             end
             -- stylua: ignore
             if client.name == "rust_analyzer" then
-              map("n", "<leader>le", "<cmd>RustRunnables<cr>", "Runnables")
-              map("n", "<leader>ll", function() vim.lsp.codelens.run() end, "Code Lens" )
-              map("n", "<leader>lt", "<cmd>Cargo test<cr>", "Cargo test" )
-              map("n", "<leader>lR", "<cmd>Cargo run<cr>", "Cargo run" )
+              map("n", "<leader>re", "<cmd>RustRunnables<cr>", "Runnables")
+              map("n", "<leader>rl", function() vim.lsp.codelens.run() end, "Code Lens" )
+              map("n", "<leader>rt", "<cmd>Cargo test<cr>", "Cargo test" )
+              map("n", "<leader>rR", "<cmd>Cargo run<cr>", "Cargo run" )
             end
           end)
 
@@ -80,11 +80,11 @@ return {
                 end
                 vim.keymap.set(mode, lhs, rhs, { silent = true, desc = desc, buffer = bufnr, noremap = true })
               end
-              map("n", "<leader>lcy", "<cmd>lua require'crates'.open_repository()<cr>", "Open Repository")
-              map("n", "<leader>lcp", "<cmd>lua require'crates'.show_popup()<cr>", "Show Popup")
-              map("n", "<leader>lci", "<cmd>lua require'crates'.show_crate_popup()<cr>", "Show Info")
-              map("n", "<leader>lcf", "<cmd>lua require'crates'.show_features_popup()<cr>", "Show Features")
-              map("n", "<leader>lcd", "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "Show Dependencies")
+              map("n", "<leader>rcy", "<cmd>lua require'crates'.open_repository()<cr>", "Open Repository")
+              map("n", "<leader>rcp", "<cmd>lua require'crates'.show_popup()<cr>", "Show Popup")
+              map("n", "<leader>rci", "<cmd>lua require'crates'.show_crate_popup()<cr>", "Show Info")
+              map("n", "<leader>rcf", "<cmd>lua require'crates'.show_features_popup()<cr>", "Show Features")
+              map("n", "<leader>rcd", "<cmd>lua require'crates'.show_dependencies_popup()<cr>", "Show Dependencies")
             end,
           })
 
