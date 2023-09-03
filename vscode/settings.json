@@ -140,7 +140,7 @@
         "*": true
     },
     "dataworkspace.excludedProjects": [],
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Tokyo Night",
     "code-runner.executorMapByFileExtension": {
         ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
         ".vbs": "cscript //Nologo",
