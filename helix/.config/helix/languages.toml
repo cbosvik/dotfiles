@@ -1,23 +1,10 @@
 [[language]]
 name = "rust"
-scope = "source.rust"
-injection-regex = "rust"
-file-types = ["rs"]
-roots = ["Cargo.toml", "Cargo.lock"]
-auto-format = true
-comment-token = "//"
-language-server = { command = "rust-analyzer" }
-indent = { tab-width = 4, unit = "	" }
+# language-server = { command = "rust-analyzer" }
 
 [language.config]
 checkOnSave = { command = "clippy"}
 
-# [language.debugger]
-# name = "lldb-vscode"
-# transport = "stdio"
-# command = "lldb-vscode"
-# If this doesn't work, you might be on a older release version which handles this differently.
-# Try using [language.config.check] instead of [language-server.rust-analyzer.config.check]
 [language-server.rust-analyzer.config.check]
 command = "clippy"
 
@@ -52,8 +39,6 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
 
 [[language]]
 name = "c-sharp"
-roots = ["csproj", "sln"]
-indent = { tab-width = 4, unit = "    " }
 language-server = { command = "dotnet", args = [ "/Users/cb/.omnisharp/Omnisharp.dll", "--languageserver" ] }
 
 [[language]]
