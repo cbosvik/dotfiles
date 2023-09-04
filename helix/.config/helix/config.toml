@@ -38,8 +38,6 @@ render = true
 
 [editor.file-picker]
 hidden = false
-parents = false
-git-ignore = false
 
 [editor.whitespace]
 render = "all"
