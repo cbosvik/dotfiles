@@ -259,7 +259,7 @@
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#0f77ff33",
         "editor.lineHighlightBorder": "#9fced11f",
-        "editorCursor.background": "#ff930f",
+        "editorCursor.background": "#000000",
         "editorCursor.foreground": "#ff930f",
         "editorLineNumber.activeForeground": "#A020F0",
         "editorLineNumber.foreground": "#5DE23C",
@@ -272,6 +272,7 @@
         "statusBar.background": "#000000",
         "statusBar.debuggingBackground": "#007acc",
         "statusBar.foreground": "#F4DB01",
+        "statusBar.debuggingForeground": "#F4DB01",
         "statusBar.noFolderBackground": "#007acc"
     },
     "workbench.list.smoothScrolling": true,
@@ -724,7 +725,7 @@
             }
         }
     },
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "terminal.external.osxExec": "wezterm",
     "terminal.integrated.profiles.osx": {
         "bash": {
