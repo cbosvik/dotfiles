@@ -19,8 +19,8 @@ config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.default_cursor_style = "SteadyBlock"
 config.window_decorations = "RESIZE"
 config.inactive_pane_hsb = {
-	saturation = 0.8,
-	brightness = 0.7,
+	saturation = 0.4,
+	brightness = 0.5,
 }
 config.quit_when_all_windows_are_closed = true
 config.color_scheme = "tokyonight"
@@ -41,7 +41,7 @@ config.window_frame = {
 
 -- config.disable_default_key_bindings = true
 
-config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "e", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	-- copy paste
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
