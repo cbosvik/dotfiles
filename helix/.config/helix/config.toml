@@ -9,7 +9,7 @@ bufferline = "multiple"
 mouse = true
 line-number = "relative"
 auto-format = true
-rulers = [80, 120]
+rulers = [120]
 
 [editor.soft-wrap]
 enable = true
