@@ -873,4 +873,5 @@
             ]
         }
     },
+    "editor.fontVariations": false,
 }
