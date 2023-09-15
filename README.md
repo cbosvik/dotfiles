@@ -18,13 +18,13 @@ brew install \
   ripgrep \
   jsonnet \
   jq \
-  exa \
+  eza \
   bottom \
   tealdeer \
   nushell \
   nvim \
   zellij \
-  thefuck \
+  // thefuck \
   zoxide \
   nnn \
   stow \

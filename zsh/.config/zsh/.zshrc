@@ -15,8 +15,7 @@ alias kga="kubectl get all"
 alias kgans="kubectl get all --all-namespaces"
 alias ssh='TERM=xterm-256color ssh'
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
-alias ls='exa -l -a --git --icons'
-alias els='exa --long --git --icons --color=always --group-directories-first'
+alias ls='eza --all --long --git --icons --color=always --group-directories-first'
 alias cat="bat"
 alias gP="git push"
 alias gp="git pull"
