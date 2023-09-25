@@ -874,4 +874,7 @@
         }
     },
     "editor.fontVariations": false,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
 }
