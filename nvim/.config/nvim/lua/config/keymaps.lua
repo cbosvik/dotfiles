@@ -4,15 +4,6 @@
 
 -- exit insert mode with jk
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
-
--- move faster with K and J
--- vim.keymap.set({ "n", "v" }, "K", "5k", { noremap = true, desc = "Up faster" })
--- vim.keymap.set({ "n", "v" }, "J", "5j", { noremap = true, desc = "Down faster" })
-
--- Remap K and J
--- vim.keymap.set({ "n", "v" }, "<leader>k", "K", { noremap = true, desc = "Keyword" })
--- vim.keymap.set({ "n", "v" }, "<leader>j", "J", { noremap = true, desc = "Join lines" })
-
 -- Save file
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { noremap = true, desc = "Save window" })
 
@@ -26,6 +17,3 @@ vim.keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>")
 vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>")
 vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>")
 vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>")
-
--- disable highlight search
--- vim.keymap.set("n", "<ESC><ESC>", ":noh", { noremap = true, desc = "Disable highlight search" })

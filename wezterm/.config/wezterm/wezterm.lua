@@ -260,7 +260,8 @@ table.insert(config.hyperlink_rules, {
 })
 
 -- https://wezfurlong.org/wezterm/faq.html#multiple-characters-being-renderedcombined-as-one-character
-config.harfbuzz_features = { 'calt=0' }
+-- config.harfbuzz_features = { 'calt=0' }
+
 
 -- and finally, return the configuration to wezterm
 return config
