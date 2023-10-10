@@ -10,8 +10,8 @@ brew install \
   jless \
   pastel \
   mdcat \
-  broot \
-  lsd \
+  <!-- broot \ -->
+  <!-- lsd \ -->
   hurl \
   atuin \
   helix \
@@ -21,12 +21,12 @@ brew install \
   eza \
   bottom \
   tealdeer \
-  nushell \
+  <!-- nushell \ -->
   nvim \
   zellij \
-  // thefuck \
+  <!-- thefuck \ -->
   zoxide \
-  nnn \
+  <!-- nnn \ -->
   stow \
   starship \
   tmux \
@@ -37,7 +37,7 @@ brew install \
   kubeseal \
   helm \
   kubelogin \
-  // httpie \
+  <!-- httpie \ -->
   xh \
   k9s \
   mc \
