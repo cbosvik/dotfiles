@@ -11,7 +11,7 @@ const topNinety = {
   left: 0,
   top: 0,
   right: 0,
-  bottom: 0.00,
+  bottom: 0.1,
 };
 const topSixty = {
   left: 0,
@@ -25,7 +25,12 @@ const topHalf = {
   right: 0,
   bottom: 0.5,
 };
-
+const topSeventy = {
+  left: 0,
+  top: 0,
+  right: 0,
+  bottom: 0.3,
+};
 const leftHalf = {
   left: 0,
   top: 0,
@@ -53,58 +58,27 @@ const full = {
   right: 0,
   bottom: 0,
 };
-const ALACRITTY_APP = "Alacritty";
-const WEZTERM_APP = "Wezterm";
+const APPS = [
+  {
+    appName: "WezTerm",
+    modifiers: ["cmd"],
+    hideOnBlur: false,
+  },
+  {
+    appName: "Code",
+    modifiers: ["cmd", "shift"],
+    hideOnBlur: false,
+  }
+];
+APPS.forEach((app) => {
+  guakeApp({ key: "-", modifiers: app.modifiers, appName: app.appName, position: topSeventy, followsMouse: true, hideOnBlur: app.hideOnBlur });
+  guakeApp({ key: "=", modifiers: app.modifiers, appName: app.appName, position: full, followsMouse: true, hideOnBlur: app.hideOnBlur });
 
-// the actual applications
-guakeApp({
-  key: "[",
-  modifiers: ["cmd"],
-  appName: "WezTerm",
-  position: topSixty,
-  followsMouse: true,
-  hideOnBlur: false,
+  // repeat for SE keyboard
+  guakeApp({ key: "+", modifiers: app.modifiers, appName: app.appName, position: topSixty, followsMouse: true, hideOnBlur: app.hideOnBlur });
+  guakeApp({ key: "´", modifiers: app.modifiers, appName: app.appName, position: full, followsMouse: true, hideOnBlur: app.hideOnBlur });
 });
-guakeApp({
-  key: "[",
-  modifiers: ["cmd", "shift"],
-  appName: "Code",
-  position: topSixty,
-  followsMouse: true,
-  hideOnBlur: false,
-});
-guakeApp({
-  key: "]",
-  modifiers: ["cmd"],
-  appName: "WezTerm",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: true,
-});
-guakeApp({
-  key: "]",
-  modifiers: ["cmd", "shift"],
-  appName: "Code",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: true,
-});
-guakeApp({
-  key: "´",
-  modifiers: ["cmd"],
-  appName: "WezTerm",
-  position: topSixty,
-  followsMouse: true,
-  hideOnBlur: true,
-});
-guakeApp({
-  key: "å",
-  modifiers: ["cmd"],
-  appName: "WezTerm",
-  position: full,
-  followsMouse: true,
-  hideOnBlur: true,
-});
+
 /**
  * @param {string} key the key which triggers the app
  * @param {string[]} modifiers the modifiers which must be used in combination with the key (["alt", "ctrl"])
