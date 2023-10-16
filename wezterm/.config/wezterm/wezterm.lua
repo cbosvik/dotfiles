@@ -20,6 +20,9 @@ config.window_padding = {
 	top = 1,
 	bottom = 1,
 }
+
+-- config.default_prog = { "/bin/zsh", "-l", "-c", "tmux attach -t base || tmux new -s base" }
+-- config.default_prog = { "/bin/zsh", "-l", "-c", "zellij attach base || zellij attach -c base" }
 -- config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
 config.default_cursor_style = "SteadyBlock"
 config.window_decorations = "RESIZE"
