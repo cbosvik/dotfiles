@@ -10,8 +10,6 @@ brew install \
   jless \
   pastel \
   mdcat \
-  <!-- broot \ -->
-  <!-- lsd \ -->
   hurl \
   atuin \
   helix \
@@ -21,12 +19,10 @@ brew install \
   eza \
   bottom \
   tealdeer \
-  <!-- nushell \ -->
+  nushell \ 
   nvim \
   zellij \
-  <!-- thefuck \ -->
   zoxide \
-  <!-- nnn \ -->
   stow \
   starship \
   tmux \
@@ -37,7 +33,6 @@ brew install \
   kubeseal \
   helm \
   kubelogin \
-  <!-- httpie \ -->
   xh \
   k9s \
   mc \
@@ -45,8 +40,10 @@ brew install \
   llvm \
   docker \
   docker-compose \
+  docker-buildx \
   colima \
-  slides
+  slides \
+  nvm
 
 
 ```
@@ -54,7 +51,7 @@ brew install \
 ```
 brew install --cask wezterm
 brew install --cask alacritty
-// brew install --cask phoenix
+brew install --cask phoenix
 brew install --cask podman-desktop
 brew install --cask hammerspoon
 ```

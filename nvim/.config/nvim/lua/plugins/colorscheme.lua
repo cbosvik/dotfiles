@@ -9,7 +9,7 @@ return {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = {
-      style = "storm",
+      style = "night",
       terminal_colors = true,
       -- transparent = true,
       styles = {
