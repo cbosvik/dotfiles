@@ -1,9 +1,5 @@
 [[language]]
 name = "rust"
-# language-server = { command = "rust-analyzer" }
-
-[language.config]
-checkOnSave = { command = "clippy"}
 
 [language-server.rust-analyzer.config.check]
 command = "clippy"
@@ -35,28 +31,31 @@ auto-format = true
 
 [[language]]
 name = "json"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 
 [[language]]
 name = "c-sharp"
-language-server = { command = "dotnet", args = [ "/Users/cb/.omnisharp/Omnisharp.dll", "--languageserver" ] }
+
+[language-server.omnisharp]
+command = "dotnet", 
+args = ["/Users/cb/.omnisharp/Omnisharp.dll", "--languageserver"]
 
 [[language]]
 name = "javascript"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
 auto-format = true
 
 [[language]]
 name = "jsx"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx" ] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
 auto-format = true
