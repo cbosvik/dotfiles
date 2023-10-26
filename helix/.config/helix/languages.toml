@@ -37,7 +37,7 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "json"] }
 name = "c-sharp"
 
 [language-server.omnisharp]
-command = "dotnet", 
+command = "dotnet"
 args = ["/Users/cb/.omnisharp/Omnisharp.dll", "--languageserver"]
 
 [[language]]
