@@ -43,7 +43,8 @@ brew install \
   docker-buildx \
   colima \
   slides \
-  nvm
+  nvm \
+  bruno
 
 
 ```
