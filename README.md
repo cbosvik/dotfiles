@@ -6,6 +6,7 @@ Clone the repo to ~/.dotfiles
 
 ```
 brew install \
+  neovim --HEAD \
   bat \
   jless \
   pastel \
