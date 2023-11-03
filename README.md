@@ -2,10 +2,11 @@
 
 Clone the repo to ~/.dotfiles
 
-# useful utilities
+## useful utilities
 
-```
+```bash
 brew install \
+  go \
   neovim --HEAD \
   bat \
   jless \
@@ -47,10 +48,15 @@ brew install \
   nvm \
   bruno
 
-
 ```
 
+## nvm
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ```
+
+```bash
 brew install --cask wezterm
 brew install --cask alacritty
 brew install --cask phoenix
@@ -60,6 +66,6 @@ brew install --cask hammerspoon
 
 ## Docker
 
-```
+```bash
 colima start --arch aarch64 --vm-type=vz --vz-rosetta
 ```
