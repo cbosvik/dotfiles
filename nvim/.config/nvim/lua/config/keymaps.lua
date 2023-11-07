@@ -48,6 +48,6 @@ local function navigate(dir)
 end
 -- Move to window using the movement keys
 for key, dir in pairs(nav) do
-  vim.keymap.set("n", "<" .. dir .. ">", navigate(key))
+  -- vim.keymap.set("n", "<" .. dir .. ">", navigate(key))
   vim.keymap.set("n", "<C-" .. key .. ">", navigate(key))
 end
