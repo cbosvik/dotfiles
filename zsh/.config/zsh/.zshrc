@@ -21,6 +21,7 @@ alias gP="git push"
 alias gp="git pull"
 alias ga="git add"
 alias gc="git commit -m"
+alias gs="git status"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
