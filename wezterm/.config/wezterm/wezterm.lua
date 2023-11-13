@@ -6,8 +6,8 @@ config.term = "wezterm"
 wezterm.log_info("reloading")
 
 require("tabs").setup(config)
-require("keys").setup(config)
 require("links").setup(config)
+require("keys").setup(config)
 
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"

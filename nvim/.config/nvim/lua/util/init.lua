@@ -184,4 +184,8 @@ function M.colorize()
   end, 2000)
 end
 
+function M.set_user_var(key, value)
+  io.write(string.format("\027]1337;SetUserVar=%s=%s\a", key, M.base64(value)))
+end
+
 return M
