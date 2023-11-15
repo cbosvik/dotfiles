@@ -7,7 +7,6 @@ return {
   opts = {
     config = {
       header = header(),
-      -- header = vim.split([["test"]], "\n"),
     },
   },
 }
