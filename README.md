@@ -46,8 +46,8 @@ brew install \
   colima \
   slides \
   nvm \
-  bruno
-
+  bruno \
+  lazydocker
 ```
 
 ## nvm
