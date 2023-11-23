@@ -18,6 +18,10 @@ return {
         -- sidebars = "transparent",
         -- floats = "transparent"
       },
+      on_highlights = function(highlights, colors)
+        highlights.LineNr = { fg = "#9ece6a" }
+        highlights.CursorLineNr = { fg = "#bb9af7" }
+      end,
     },
   },
 }
