@@ -27,8 +27,9 @@ config.window_decorations = "RESIZE"
 -- 	cursor_bg = "orange",
 -- }
 -- Fonts
-config.font_size = 12
-config.font = wezterm.font({ family = "JetBrainsMono Nerd Font" })
+config.font_size = 13
+-- config.font = wezterm.font({ family = "JetBrainsMono Nerd Font" })
+config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font" })
 config.bold_brightens_ansi_colors = true
 
 -- Cursor
