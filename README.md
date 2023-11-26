@@ -7,7 +7,9 @@ Clone the repo to ~/.dotfiles
 ```bash
 brew install \
   go \
-  neovim --HEAD \
+# use bob instead
+#  neovim --HEAD \
+  bob \
   bat \
   jless \
   pastel \
@@ -48,6 +50,13 @@ brew install \
   nvm \
   bruno \
   lazydocker
+```
+
+## bob
+
+```bash
+brew install bob
+bob use nightly|stable|latest
 ```
 
 ## nvm
