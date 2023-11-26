@@ -29,7 +29,7 @@ config.window_decorations = "RESIZE"
 -- Fonts
 config.font_size = 13
 -- config.font = wezterm.font({ family = "JetBrainsMono Nerd Font" })
-config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font" })
+config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font Mono" })
 config.bold_brightens_ansi_colors = true
 
 -- Cursor
