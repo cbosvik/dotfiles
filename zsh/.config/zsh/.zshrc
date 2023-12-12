@@ -56,4 +56,4 @@ eval "$(atuin init zsh)"
 # Zoxide
 eval "$(zoxide init zsh)"
 
-source /Users/cb/.config/broot/launcher/bash/br
+# source /Users/cb/.config/broot/launcher/bash/br
