@@ -28,7 +28,7 @@ config.window_decorations = "RESIZE"
 -- }
 -- Fonts
 config.font_size = 12
-config.font = wezterm.font({ family = "JetBrainsMono Nerd Font" })
+-- config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Regular" })
 -- config.font = wezterm.font({ family = "Hack Nerd Font", weight = "Regular" })
 -- config.font = wezterm.font({ family = "FiraCode Nerd Font", weight = "Regular" })
 -- config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font", weight = "Regular" })

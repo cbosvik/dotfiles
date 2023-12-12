@@ -6,10 +6,11 @@ Clone the repo to ~/.dotfiles
 
 ```bash
 brew install \
+# go
   go \
-# use bob instead
-#  neovim --HEAD \
+# neovim version manager
   bob \
+# better cat
   bat \
   jless \
   pastel \
@@ -70,7 +71,6 @@ brew install --cask wezterm
 brew install --cask alacritty
 brew install --cask phoenix
 brew install --cask podman-desktop
-brew install --cask hammerspoon
 ```
 
 ## Docker
