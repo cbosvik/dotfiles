@@ -71,7 +71,7 @@ const APPS = [
   }
 ];
 APPS.forEach((app) => {
-  guakeApp({ key: "-", modifiers: app.modifiers, appName: app.appName, position: topSeventy, followsMouse: true, hideOnBlur: app.hideOnBlur });
+  guakeApp({ key: "-", modifiers: app.modifiers, appName: app.appName, position: topSixty, followsMouse: true, hideOnBlur: app.hideOnBlur });
   guakeApp({ key: "=", modifiers: app.modifiers, appName: app.appName, position: full, followsMouse: true, hideOnBlur: app.hideOnBlur });
 
   // repeat for SE keyboard
