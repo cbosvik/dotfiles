@@ -53,7 +53,7 @@ return {
           ["core.dirman"] = { -- Manages Neorg workspaces
             config = {
               workspaces = {
-                paersonal = "~/code/notes/personal",
+                personal = "~/code/notes/personal",
                 work = "~/code/notes/work",
               },
             },
