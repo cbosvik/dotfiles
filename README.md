@@ -21,6 +21,7 @@ brew install \
   ripgrep \
   jsonnet \
   jq \
+  git-delta  \
   eza \
   bottom \
   tealdeer \
