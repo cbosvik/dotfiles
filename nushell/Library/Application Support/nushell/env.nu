@@ -69,3 +69,5 @@ $env.SKF = '/Users/cb/code/skf'
 $env.XDG_CACHE_HOME = '/Users/cb/.cache'
 $env.XDG_CONFIG_HOME = '/Users/cb/.config'
 $env.XDG_DATA_HOME = '/Users/cb/.local/share'
+
+# zoxide init nushell
