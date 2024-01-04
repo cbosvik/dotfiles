@@ -3,10 +3,10 @@
 # version = 0.82.0
 
 $env.PATH = "/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-$env.PATH = ($env.PATH | split row (char esep) | append "/usr/local/share/dotnet:~/.dotnet/tools")
-$env.PATH = ($env.PATH | split row (char esep) | append "~/.cargo/bin:~/go/bin:~/.nvm/versions/node/v16.14.0/bin/:/opt/homebrew/opt/llvm/bin'")
+$env.PATH = ($env.PATH | split row (char esep) | append "/usr/local/share/dotnet:/Users/cb/.dotnet/tools")
+$env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.cargo/bin:/Users/cb/go/bin:/Users/cb/.nvm/versions/node/v16.14.0/bin/:/opt/homebrew/opt/llvm/bin'")
 $env.PATH = ($env.PATH | split row (char esep) | append "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin")
-$env.PATH = ($env.PATH | split row (char esep) | append "~/.local/bin")
+$env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.local/bin")
 
 # $env.STARSHIP_SHELL = "nu"
 
@@ -62,22 +62,22 @@ $env.VISUAL = "hx"
 $env.TERM = xterm-256color
 $env.COLORTERM = truecolor
 
-$env.CODEDIR = '~/code'
-$env.DOTFILES = '~/.dotfiles'
-$env.GOPATH = '~/go'
+$env.CODEDIR = '/Users/cb/code'
+$env.DOTFILES = '/Users/cb/.dotfiles'
+$env.GOPATH = '/Users/cb/go'
 $env.HOMEBREW_CELLAR = '/opt/homebrew/Cellar'
 $env.HOMEBREW_PREFIX = '/opt/homebrew'
 $env.HOMEBREW_REPOSITORY = '/opt/homebrew'
-$env.NVIMDIR = '~/.config/nvim'
-$env.SKF = '~/code/skf'
-$env.XDG_CACHE_HOME = '~~.cache'
-$env.XDG_CONFIG_HOME = '~/.config'
-$env.XDG_DATA_HOME = '~/.local/share'
+$env.NVIMDIR = '/Users/cb/.config/nvim'
+$env.SKF = '/Users/cb/code/skf'
+$env.XDG_CACHE_HOME = '/Users/cb/.cache'
+$env.XDG_CONFIG_HOME = '/Users/cb/.config'
+$env.XDG_DATA_HOME = '/Users/cb/.local/share'
 
 $env.KUBECONFIG = "/Users/cb/.kube/config:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml"
 
-$env.STARSHIP_CONFIG = "~/.config/starship/starship.toml"
+$env.STARSHIP_CONFIG = "/Users/cb/.config/starship/starship.toml"
 
-# zoxide init nushell | save -f ~/.dotfiles/zoxide/.config/zoxide/zoxide.nu
+# zoxide init nushell | save -f /Users/cb/.dotfiles/zoxide/.config/zoxide/zoxide.nu
 
-# starship init nu | save -f ~/.dotfiles/starship/.config/starship/init.nu
+# starship init nu | save -f /Users/cb/.dotfiles/starship/.config/starship/init.nu

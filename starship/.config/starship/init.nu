@@ -49,5 +49,5 @@ export-env { load-env {
 def kube_prompt [] {
     let ctx = ((kubectl ctx -c) | str trim)
     let ns = ((kubectl ns -c) | str trim)
-    $"☸[($ctx)\(($ns)\)]"
+    $"☸ ($ctx)\(($ns)\)"
 }

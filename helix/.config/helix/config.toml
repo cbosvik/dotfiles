@@ -99,11 +99,11 @@ x = ":bc"
 "!" = ":q!"
 o = ":reload-all"
 
-[keys.normal.'space'.'space']
-b = ":sh hx-wezterm.sh blame"
-e = ":sh hx-wezterm.sh explorer"
-f = ":sh hx-wezterm.sh fzf"
-g = ":sh hx-wezterm.sh lazygit"
+# [keys.normal.'space'.'space']
+# b = ":sh hx-wezterm.sh blame"
+# e = ":sh hx-wezterm.sh explorer"
+# f = ":sh hx-wezterm.sh fzf"
+# g = ":sh hx-wezterm.sh lazygit"
 # o = ":sh hx-wezterm.sh open"
 # r = ":sh hx-wezterm.sh run"
 # s = ":sh hx-wezterm.sh test_single"
@@ -132,27 +132,27 @@ g = ":sh hx-wezterm.sh lazygit"
 # g = ":pipe-to helix-tmux git --lazygit"
 
 # # Zelllij
-# [keys.normal.'space'.'space']
+[keys.normal.'space'.'space']
 ## Interactive search in current working directory
-# l = ":pipe-to helix-zellij search --current"
+l = ":pipe-to helix-zellij search --current"
 # ## Interactive search in current working directory (include path name in the search)
-# L = ":pipe-to helix-zellij search --current-inc-path"
+L = ":pipe-to helix-zellij search --current-inc-path"
 # ## Interactive search in current git directory
-# w = ":pipe-to helix-zellij search --workspace"
+w = ":pipe-to helix-zellij search --workspace"
 # ## Interactive search in current git directory (include path name in the search)
-# W = ":pipe-to helix-zellij search --workspace-inc-path"
+W = ":pipe-to helix-zellij search --workspace-inc-path"
 # ## Interactive search in current buffer
-# B = ":pipe-to helix-zellij search --buffer"
+B = ":pipe-to helix-zellij search --buffer"
 # ## Git status
-# s = ":pipe-to helix-zellij git --status"
+s = ":pipe-to helix-zellij git --status"
 # ## Git blame
-# b = ":pipe-to helix-zellij git --blame"
+b = ":pipe-to helix-zellij git --blame"
 # ## Git browse github repo using default browser
 # H = ":pipe-to helix-zellij git --browse"
 # ## lazygit
-# g = ":pipe-to helix-zellij git --lazygit"
+g = ":pipe-to helix-zellij git --lazygit"
 # ## Diff current buffer with content on disk
-# d = ":pipe-to helix-zellij diff"
+d = ":pipe-to helix-zellij diff"
 
 [keys.select]
 k = ["extend_line_up", "extend_to_line_bounds"]
