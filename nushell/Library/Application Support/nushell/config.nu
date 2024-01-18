@@ -8,6 +8,13 @@ alias kga = kubectl get all
 alias kgans = kubectl get all --all-namespaces
 alias ls = ls -a
 alias cat = bat
+# alias ssh = TERM=xterm-256color ssh
+alias gP = git push
+alias gp = git pull
+alias gs = git status
+alias gd = git diff
+alias gc = git commit -m
+alias emacs = /opt/homebrew/opt/emacs-mac/bin/emacsclient -c 
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
@@ -770,3 +777,4 @@ $env.config = {
 
 source ~/.config/zoxide/zoxide.nu
 source ~/.config/starship/init.nu
+source ~/.config/atuin/init.nu

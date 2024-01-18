@@ -23,6 +23,7 @@ alias ga="git add"
 alias gc="git commit -m"
 alias gs="git status"
 alias br="broot"
+alias emacs="/opt/homebrew/opt/emacs-mac/bin/emacsclient -c"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

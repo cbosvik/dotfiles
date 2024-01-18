@@ -7,6 +7,8 @@ $env.PATH = ($env.PATH | split row (char esep) | append "/usr/local/share/dotnet
 $env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.cargo/bin:/Users/cb/go/bin:/Users/cb/.nvm/versions/node/v16.14.0/bin/:/opt/homebrew/opt/llvm/bin'")
 $env.PATH = ($env.PATH | split row (char esep) | append "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin")
 $env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.local/bin")
+$env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.local/share/bob/nvim-bin")
+$env.PATH = ($env.PATH | split row (char esep) | append "/Users/cb/.config/emacs/bin")
 
 # $env.STARSHIP_SHELL = "nu"
 
@@ -54,8 +56,8 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # editor
-$env.EDITOR = "hx"
-$env.VISUAL = "hx"
+$env.EDITOR = "nvim"
+$env.VISUAL = "nvim"
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
 
@@ -73,6 +75,7 @@ $env.SKF = '/Users/cb/code/skf'
 $env.XDG_CACHE_HOME = '/Users/cb/.cache'
 $env.XDG_CONFIG_HOME = '/Users/cb/.config'
 $env.XDG_DATA_HOME = '/Users/cb/.local/share'
+$env.DOOMDIR = '/Users/cb/.config/doom'
 
 $env.KUBECONFIG = "/Users/cb/.kube/config:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/k3s-admins.yaml:/Users/cb/code/skf/k8s-cluster-configuration/kubeconfigs/my-user.yaml"
 

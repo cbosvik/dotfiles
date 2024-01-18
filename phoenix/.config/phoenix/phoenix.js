@@ -52,6 +52,12 @@ const rightHalf = {
   bottom: 0,
 };
 
+const fullScreen = {
+  left: 0,
+  top: -0.1,
+  right: 0,
+  bottom: 0,
+};
 const full = {
   left: 0,
   top: 0,
@@ -72,11 +78,11 @@ const APPS = [
 ];
 APPS.forEach((app) => {
   guakeApp({ key: "-", modifiers: app.modifiers, appName: app.appName, position: topSixty, followsMouse: true, hideOnBlur: app.hideOnBlur });
-  guakeApp({ key: "=", modifiers: app.modifiers, appName: app.appName, position: full, followsMouse: true, hideOnBlur: app.hideOnBlur });
+  guakeApp({ key: "=", modifiers: app.modifiers, appName: app.appName, position: app.appName === "WezTerm" ? fullScreen : full, followsMouse: true, hideOnBlur: app.hideOnBlur });
 
   // repeat for SE keyboard
   guakeApp({ key: "+", modifiers: app.modifiers, appName: app.appName, position: topSixty, followsMouse: true, hideOnBlur: app.hideOnBlur });
-  guakeApp({ key: "´", modifiers: app.modifiers, appName: app.appName, position: full, followsMouse: true, hideOnBlur: app.hideOnBlur });
+  guakeApp({ key: "´", modifiers: app.modifiers, appName: app.appName, position: app.appName === "WezTerm" ? fullScreen : full, followsMouse: true, hideOnBlur: app.hideOnBlur });
 });
 
 /**

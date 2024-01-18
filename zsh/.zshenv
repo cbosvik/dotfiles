@@ -6,8 +6,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # editor
-export EDITOR="hx"
-export VISUAL="hx"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
@@ -28,3 +28,5 @@ export GOPATH=$HOME/go
 
 #export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 #. "$HOME/.cargo/env"
+
+export DOOMDIR=$HOME/.config/doom
