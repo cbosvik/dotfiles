@@ -178,7 +178,7 @@ keybinds clear-defaults=true {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
     }
     shared {
-        bind "Ctrl l" {
+        bind "Alt g" {
             Run "lazygit" {
                 close_on_exit true
             };
