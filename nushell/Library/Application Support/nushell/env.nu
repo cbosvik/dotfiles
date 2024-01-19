@@ -84,3 +84,14 @@ $env.STARSHIP_CONFIG = "/Users/cb/.config/starship/starship.toml"
 # zoxide init nushell | save -f /Users/cb/.dotfiles/zoxide/.config/zoxide/zoxide.nu
 
 # starship init nu | save -f /Users/cb/.dotfiles/starship/.config/starship/init.nu
+
+# Zellij
+# Optional layouts dir
+#$env.ZELLIJ_RUNNER_LAYOUTS_DIR = '/Users/cb/.config/zellij/layouts'
+$env.ZELLIJ_RUNNER_BANNERS_DIR = '/Users/cb/.config/zellij/banners'
+# directory with the projects, relative to the HOME dir
+$env.ZELLIJ_RUNNER_ROOT_DIR = 'code'
+# switcher already respects gitignore, but it's still useful in case there's no git
+$env.ZELLIJ_RUNNER_IGNORE_DIRS = 'node_modules,target,bin,obj'
+# traverse dirs 3 level max from ZELLIJ_RUNNER_ROOT_DIR
+$env.ZELLIJ_RUNNER_MAX_DIRS_DEPTH = 3

@@ -1,12 +1,6 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds clear-defaults=true {
     normal {
-//  bind "Ctrl g" {
-//   Run "lazygit" {
-//     close_on_exit true
-//   };
-//   TogglePaneEmbedOrFloating;
-// }
  // bind "Alt c" { Copy; }
     }
     locked {
@@ -115,6 +109,13 @@ keybinds clear-defaults=true {
         bind "Ctrl o" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
+        bind "w" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
     }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
@@ -175,6 +176,14 @@ keybinds clear-defaults=true {
     }
     shared_except "tmux" "locked" {
         bind "Ctrl b" { SwitchToMode "Tmux"; }
+    }
+    shared {
+        bind "Ctrl l" {
+            Run "lazygit" {
+                close_on_exit true
+            };
+            TogglePaneEmbedOrFloating;
+        }
     }
 }
 
@@ -246,7 +255,8 @@ pane_frames false
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
-theme "tokyo-night-storm"
+// theme "tokyo-night-storm"
+theme "catppuccin-mocha"
 
 // The name of the default layout to load on startup
 // Default: "default"
@@ -302,7 +312,7 @@ default_mode "locked"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "/opt/homebrew/bin/hx"
+// scrollback_editor "/opt/homebrew/bin/hx"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

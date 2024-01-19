@@ -30,3 +30,15 @@ export GOPATH=$HOME/go
 #. "$HOME/.cargo/env"
 
 export DOOMDIR=$HOME/.config/doom
+
+# Zellij
+# Optional layouts dir
+#export ZELLIJ_RUNNER_LAYOUTS_DIR="/Users/cb/.config/zellij/layouts"
+#  To show a banner, provide a path to the directory with ASCII art.
+export ZELLIJ_RUNNER_BANNERS_DIR="/Users/cb/.config/zellij/banners"
+# directory with the projects, relative to the HOME dir
+export ZELLIJ_RUNNER_ROOT_DIR=code
+# switcher already respects gitignore, but it's still useful in case there's no git
+export ZELLIJ_RUNNER_IGNORE_DIRS=node_modules,target,bin,obj
+# traverse dirs 3 level max from ZELLIJ_RUNNER_ROOT_DIR
+export ZELLIJ_RUNNER_MAX_DIRS_DEPTH=3
