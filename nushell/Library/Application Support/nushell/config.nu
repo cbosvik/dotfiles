@@ -9,6 +9,7 @@ alias kgans = kubectl get all --all-namespaces
 alias ls = ls -a
 alias cat = bat
 # alias ssh = TERM=xterm-256color ssh
+alias ga = git add
 alias gP = git push
 alias gp = git pull
 alias gs = git status
