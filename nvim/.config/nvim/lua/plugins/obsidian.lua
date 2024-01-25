@@ -19,7 +19,7 @@ return {
   opts = {
     workspaces = {
       {
-        name = "personal",
+        name = "notes",
         path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/notes/",
       },
     },

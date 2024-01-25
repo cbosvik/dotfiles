@@ -2,9 +2,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local mux = wezterm.mux
+-- local terminal_font = "JetBrainsMono Nerd Font"
+local terminal_font = "CaskaydiaCove Nerd Font"
 wezterm.on("gui-startup", function()
 	local tab, pane, window = mux.spawn_window({})
-	window:gui_window():toggle_fullscreen()
+	window:gui_window():maximize()
 end)
 config.term = "wezterm"
 
@@ -22,6 +24,7 @@ config.cursor_blink_ease_out = "Constant"
 
 -- Colorscheme
 config.color_scheme = "tokyonight"
+-- config.color_scheme = "tokyonight"
 
 config.underline_thickness = 3
 config.cursor_thickness = 4
@@ -32,12 +35,42 @@ config.window_decorations = "RESIZE"
 -- 	cursor_bg = "orange",
 -- }
 -- Fonts
-config.font_size = 12
--- config.font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Regular" })
+config.font_size = 13
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font({ family = terminal_font, weight = "Light" })
 -- config.font = wezterm.font({ family = "Hack Nerd Font", weight = "Regular" })
 -- config.font = wezterm.font({ family = "FiraCode Nerd Font", weight = "Regular" })
--- config.font = wezterm.font({ family = "CaskaydiaCove Nerd Font", weight = "Regular" })
+config.font = wezterm.font({ family = terminal_font, weight = "Light", stretch = "Normal", style = "Normal" })
 config.bold_brightens_ansi_colors = true
+config.font_rules = {
+	{
+		intensity = "Bold",
+		italic = false,
+		font = wezterm.font({ family = terminal_font, weight = "Bold", style = "Normal" }),
+	},
+
+	-- Bold-and-italic
+	{
+		intensity = "Bold",
+		italic = true,
+		-- font = wezterm.font(terminal_font, { weight = "Bold", style = "Italic" }),
+		font = wezterm.font({ family = "Victor Mono", weight = "Bold", style = "Italic" }),
+	},
+
+	-- normal-intensity-and-italic
+	{
+		intensity = "Normal",
+		italic = true,
+		font = wezterm.font({ family = "Victor Mono", weight = "Regular", style = "Italic" }),
+	},
+	{
+		intensity = "Normal",
+		strikethrough = true,
+		italic = false,
+		-- font = wezterm.font(terminal_font, { weight = "Light", stretch = "Normal", style = "Normal" }),
+		font = wezterm.font({ family = terminal_font, weight = "Light", style = "Normal" }),
+	},
+}
 
 -- Cursor
 config.default_cursor_style = "BlinkingBar"

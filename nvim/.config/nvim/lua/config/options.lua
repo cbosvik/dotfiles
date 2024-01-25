@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 vim.opt.relativenumber = true
-vim.o.termguicolors = true
+-- vim.o.termguicolors = true
 
 -- show file path and name in buffer
-vim.opt.winbar = "%=%m %f"
+-- vim.opt.winbar = "%=%m %f"

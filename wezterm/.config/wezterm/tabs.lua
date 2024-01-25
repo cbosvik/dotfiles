@@ -17,6 +17,7 @@ M.icons = {
 	["go"] = wezterm.nerdfonts.seti_go,
 	["zsh"] = wezterm.nerdfonts.dev_terminal,
 	["bash"] = wezterm.nerdfonts.cod_terminal_bash,
+	["nu"] = wezterm.nerdfonts.cod_terminal,
 	["btm"] = wezterm.nerdfonts.mdi_chart_donut_variant,
 	["htop"] = wezterm.nerdfonts.mdi_chart_donut_variant,
 	["cargo"] = wezterm.nerdfonts.dev_rust,
