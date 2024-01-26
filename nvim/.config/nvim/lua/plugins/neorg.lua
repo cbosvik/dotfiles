@@ -12,7 +12,7 @@ return {
       { "nvim-lua/plenary.nvim" },
     },
     wk.register({
-      ["<leader>o"] = {
+      ["<leader>n"] = {
         name = "+neorg",
         c = { "<cmd>Neorg toc split<cr>", "Open table of contents" },
         m = { "<cmd>Neorg<cr>", "Open Neorg menu" },
