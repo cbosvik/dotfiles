@@ -18,7 +18,7 @@ return {
       --     end
       --   end,
       -- },
-      { "pysan3/neorg-templates", dependencies = { "L3MON4D3/LuaSnip" } }, -- ADD THIS LINE
+      -- { "pysan3/neorg-templates", dependencies = { "L3MON4D3/LuaSnip" } }, -- ADD THIS LINE
     },
     wk.register({
       ["<leader>o"] = {
@@ -28,31 +28,30 @@ return {
         n = {
           name = "+notes",
           n = { "<cmd>Neorg keybind norg core.dirman.new.note<cr>", "New note" },
-          i = { "<cmd>Neorg templates load notes<cr>", "Load notes template" },
-          t = {
-            name = "+tasks",
-            m = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle<cr>", "Cycle task state" },
-            n = {
-              "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle_reverse<cr>",
-              "Reverse cycle task state",
-            },
-            d = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_done<cr>", "Mark task done" },
-            u = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_undone<cr>", "Mark task undone" },
-            p = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_pending<cr>", "Mark task pending" },
-            c = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cancelled<cr>", "Mark task cancelled" },
-            i = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_important<cr>", "Mark task important" },
-            r = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_recurring<cr>", "Mark task recurring" },
+          c = { "<cmd>Neorg keybind all core.looking-glass.magnify-code-block<cr>", "Edit code block" },
+        },
+        j = {
+          name = "+journal",
+          t = { "<cmd>Neorg journal today<cr>", "Open journal today" },
+          m = { "<cmd>Neorg journal tomorrow<cr>", "Open journal tomorrow" },
+          y = { "<cmd>Neorg journal yesterday<cr>", "Open journal yesterday" },
+          c = { "<cmd>Neorg journal custom<cr>", "Open journal custom date" },
+          o = { "<cmd>Neorg journal toc open<cr>", "Open journal table of contents" },
+          u = { "<cmd>Neorg journal toc update<cr>", "Update journal table of contents" },
+        },
+        t = {
+          name = "+tasks",
+          m = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle<cr>", "Cycle task state" },
+          n = {
+            "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle_reverse<cr>",
+            "Reverse cycle task state",
           },
-          j = {
-            name = "+journal",
-            t = { "<cmd>Neorg journal today<cr>", "Open journal today" },
-            m = { "<cmd>Neorg journal tomorrow<cr>", "Open journal tomorrow" },
-            y = { "<cmd>Neorg journal yesterday<cr>", "Open journal yesterday" },
-            c = { "<cmd>Neorg journal custom<cr>", "Open journal custom date" },
-            o = { "<cmd>Neorg journal toc open<cr>", "Open journal table of contents" },
-            u = { "<cmd>Neorg journal toc update<cr>", "Update journal table of contents" },
-            i = { "<cmd>Neorg templates load journal<cr>", "Load journal template" },
-          },
+          d = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_done<cr>", "Mark task done" },
+          u = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_undone<cr>", "Mark task undone" },
+          p = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_pending<cr>", "Mark task pending" },
+          c = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cancelled<cr>", "Mark task cancelled" },
+          i = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_important<cr>", "Mark task important" },
+          r = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_recurring<cr>", "Mark task recurring" },
         },
         i = { "<cmd>Neorg index<cr>", "Open index" },
       },
@@ -107,18 +106,13 @@ return {
               workspace = "notes",
             },
           },
-          ["external.templates"] = {
-            config = {
-              templates_dir = "/Users/cb/.config/nvim/templates/norg/",
-              -- default_subcommand = "add", -- or "fload", "load"
-              -- keywords = { -- Add your own keywords.
-              --   EXAMPLE_KEYWORD = function ()
-              --     return require("luasnip").insert_node(1, "default text blah blah")
-              --   end,
-              -- },
-              -- snippets_overwrite = {},
-            },
-          },
+          ["core.esupports.metagen"] = { config = { type = "auto", update_date = true } },
+          ["core.looking-glass"] = {},
+          -- ["external.templates"] = {
+          --   config = {
+          --     templates_dir = "/Users/cb/.config/nvim/templates/norg/",
+          --   },
+          -- },
         },
       })
     end,
