@@ -15,7 +15,8 @@ alias gp = git pull
 alias gs = git status
 alias gd = git diff
 alias gc = git commit -m
-alias emacs = /opt/homebrew/opt/emacs-mac/bin/emacsclient -c 
+alias emacs = emacsclient -nc 
+alias zell = zellij attach -c work
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html

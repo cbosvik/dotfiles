@@ -1,24 +1,27 @@
 layout {
-        pane size=2 split_direction="vertical" {
-        pane size="50%" borderless=true {
-            plugin location="zellij:tab-bar"
-        }
-        pane size="50%" borderless=true {
-            plugin location="file:/Users/cb/.dotfiles/zellij/.config/zellij/plugins/zellij-datetime.wasm" {
-                timezone1 "CET/+1"
-                timezone2 "UTC/0"
-                default_timezone "CET"
-                background_color "#a6e3a1" 
-                foreground_color "#181825"
-                pane_color "#1a1b26"
-                enable_right_click false
-                arrow_separator1 ""
-                arrow_separator2 ""
-                arrow_separator3 ""
-                padding_adjust 0
-                text_align "right"
-            }
-        }
+    //     pane size=2 split_direction="vertical" {
+    //     pane size="50%" borderless=true {
+    //         plugin location="zellij:tab-bar"
+    //     }
+    //     pane size="50%" borderless=true {
+    //         plugin location="file:/Users/cb/.dotfiles/zellij/.config/zellij/plugins/zellij-datetime.wasm" {
+    //             timezone1 "CET/+1"
+    //             timezone2 "UTC/0"
+    //             default_timezone "CET"
+    //             background_color "#a6e3a1" 
+    //             foreground_color "#181825"
+    //             pane_color "#1a1b26"
+    //             enable_right_click false
+    //             arrow_separator1 ""
+    //             arrow_separator2 ""
+    //             arrow_separator3 ""
+    //             padding_adjust 0
+    //             text_align "right"
+    //         }
+    //     }
+    // }
+    pane size=1 borderless=true {
+        plugin location="zellij:tab-bar"
     }
     pane
     pane size=2 borderless=true {

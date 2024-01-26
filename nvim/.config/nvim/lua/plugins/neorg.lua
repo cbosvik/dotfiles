@@ -96,7 +96,7 @@ return {
           ["core.ui.calendar"] = {},
           ["core.journal"] = {
             config = {
-              strategy = "flat",
+              strategy = "nested",
               workspace = "notes",
             },
           },
