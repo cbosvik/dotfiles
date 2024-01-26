@@ -10,15 +10,6 @@ return {
     -- lazy = false,
     dependencies = {
       { "nvim-lua/plenary.nvim" },
-      -- {
-      --   "nvim-treesitter/nvim-treesitter",
-      --   opts = function(_, opts)
-      --     if type(opts.ensure_installed) == "table" then
-      --       vim.list_extend(opts.ensure_installed, { "norg" })
-      --     end
-      --   end,
-      -- },
-      -- { "pysan3/neorg-templates", dependencies = { "L3MON4D3/LuaSnip" } }, -- ADD THIS LINE
     },
     wk.register({
       ["<leader>o"] = {
@@ -58,7 +49,6 @@ return {
     }),
     config = function()
       require("neorg").setup({
-        -- Tell Neorg what modules
         load = {
           ["core.defaults"] = {}, -- Loads default behaviour
           ["core.completion"] = { config = { engine = "nvim-cmp", name = "[Norg]" } },
@@ -68,11 +58,11 @@ return {
             config = {
               icon_preset = "varied",
               icons = {
-                --     delimiter = {
-                --       horizontal_line = {
-                --         highlight = "@neorg.delimiters.horizontal_line",
-                --       },
-                --     },
+                delimiter = {
+                  horizontal_line = {
+                    highlight = "@neorg.delimiters.horizontal_line",
+                  },
+                },
                 code_block = {
                   content_only = true,
                   width = "fullwidth",
@@ -108,11 +98,6 @@ return {
           },
           ["core.esupports.metagen"] = { config = { type = "auto", update_date = true } },
           ["core.looking-glass"] = {},
-          -- ["external.templates"] = {
-          --   config = {
-          --     templates_dir = "/Users/cb/.config/nvim/templates/norg/",
-          --   },
-          -- },
         },
       })
     end,
