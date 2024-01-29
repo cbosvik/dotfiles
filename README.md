@@ -69,7 +69,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 
 ```bash
 brew install --cask wezterm
-brew install --cask alacritty
 brew install --cask phoenix
 brew install --cask podman-desktop
 ```
