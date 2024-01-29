@@ -29,14 +29,21 @@ return {
           c = { "<cmd>Neorg journal custom<cr>", "Open journal custom date" },
           o = { "<cmd>Neorg journal toc open<cr>", "Open journal table of contents" },
           u = { "<cmd>Neorg journal toc update<cr>", "Update journal table of contents" },
+          w = {
+            name = "+weather",
+            s = { "i- Weather: Sunny <esc>", "Sunny" },
+            c = { "i- Weather: Cloudy <esc>", "Cloudy" },
+            r = { "i- Weather: Rainy <esc>", "Rainy" },
+          },
         },
         t = {
           name = "+tasks",
           m = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle<cr>", "Cycle task state" },
-          n = {
-            "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle_reverse<cr>",
-            "Reverse cycle task state",
-          },
+          -- n = {
+          --   "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_cycle_reverse<cr>",
+          --   "Reverse cycle task state",
+          -- },
+          n = { "i- ( ) ", "New Task" },
           d = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_done<cr>", "Mark task done" },
           u = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_undone<cr>", "Mark task undone" },
           p = { "<cmd>Neorg keybind norg core.qol.todo_items.todo.task_pending<cr>", "Mark task pending" },

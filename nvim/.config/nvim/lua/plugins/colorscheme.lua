@@ -27,6 +27,9 @@ return {
         highlights.CursorLineNr = { fg = "#bb9af7" }
         highlights["@text.strong"] = { link = "Bold" }
         highlights["@text.emphasis"] = { link = "Italic" }
+        highlights["@text.uri"] = { link = "URL" }
+        highlights.URL = { link = "Link" }
+        highlights.Link = { link = "markdownLinkText" }
       end,
     },
   },
