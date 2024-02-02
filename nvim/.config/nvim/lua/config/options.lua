@@ -7,3 +7,5 @@ vim.opt.relativenumber = true
 
 -- show file path and name in buffer
 -- vim.opt.winbar = "%=%m %f"
+vim.cmd([[let &shell = '/opt/homebrew/bin/nu']])
+vim.cmd([[let &shellcmdflag = '-l']])

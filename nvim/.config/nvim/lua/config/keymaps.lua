@@ -3,7 +3,7 @@
 -- Add any additional keymaps here
 local util = require("util")
 
-util.cowboy()
+-- util.cowboy()
 -- exit insert mode with jk
 vim.keymap.set("i", "jk", "<ESC>", { noremap = true, silent = true, desc = "<ESC>" })
 
