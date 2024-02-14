@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 local util = require("util")
+local Util = require("lazyvim.util")
 
 -- util.cowboy()
 -- exit insert mode with jk
@@ -51,3 +52,8 @@ for key, dir in pairs(nav) do
   -- vim.keymap.set("n", "<" .. dir .. ">", navigate(key))
   vim.keymap.set("n", "<C-" .. key .. ">", navigate(key))
 end
+
+-- Lazydocker
+vim.keymap.set("n", "<leader>gd", function()
+  Util.terminal({ "lazydocker" }, { esc_esc = false, ctrl_hjkl = false })
+end, { desc = "Lazydocker" })
