@@ -54,6 +54,6 @@ for key, dir in pairs(nav) do
 end
 
 -- Lazydocker
-vim.keymap.set("n", "<leader>gd", function()
+vim.keymap.set("n", "<leader>D", function()
   Util.terminal({ "lazydocker" }, { esc_esc = false, ctrl_hjkl = false })
 end, { desc = "Lazydocker" })
