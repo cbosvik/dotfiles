@@ -10,3 +10,5 @@ disabled = false
 symbol = '☸ '
 format = '[$symbol$context( \($namespace\))]($style)'
 
+# [line_break]
+# disabled = true
