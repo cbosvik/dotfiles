@@ -9,6 +9,10 @@ wezterm.on("gui-startup", function()
 	window:gui_window():maximize()
 end)
 config.term = "wezterm"
+config.inactive_pane_hsb = {
+	saturation = 0.5,
+	brightness = 0.5,
+}
 
 wezterm.log_info("reloading")
 
