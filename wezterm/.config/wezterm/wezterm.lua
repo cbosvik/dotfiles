@@ -10,7 +10,7 @@ wezterm.on("gui-startup", function()
 end)
 config.term = "wezterm"
 config.inactive_pane_hsb = {
-	saturation = 0.5,
+	saturation = 0.8,
 	brightness = 0.5,
 }
 
@@ -84,7 +84,7 @@ config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 -- cell_width = 0.9,
 config.scrollback_lines = 10000
 -- config.default_prog = { "/bin/zsh", "-l", "-c", "zellij attach base || zellij attach -c base" }
--- config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
+config.default_prog = { "/opt/homebrew/bin/nu", "-l" }
 -- config.default_prog = { "/opt/homebrew/bin/nu", "-l", "-c", "zellijj attach -c work" }
 config.quit_when_all_windows_are_closed = true
 config.line_height = 1.2
