@@ -1,4 +1,3 @@
-local wk = require("which-key")
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -11,14 +10,17 @@ return {
   {
     "rest-nvim/rest.nvim",
     dependencies = { { "nvim-lua/plenary.nvim" } },
-    wk.register({
-      ["<leader>r"] = {
-        name = "+rest",
-        s = { "<Plug>RestNvim", "Send the request" },
-        p = { "<Plug>RestNvimPreview", "Preview cURL" },
-        r = { "<Plug>RestNvimLast", "Re-run last request" },
-      },
-    }),
+    init = function()
+      local wk = require("which-key")
+      wk.register({
+        ["<leader>r"] = {
+          name = "+rest",
+          s = { "<Plug>RestNvim", "Send the request" },
+          p = { "<Plug>RestNvimPreview", "Preview cURL" },
+          r = { "<Plug>RestNvimLast", "Re-run last request" },
+        },
+      })
+    end,
     config = function()
       require("rest-nvim").setup({
         -- Open request results in a horizontal split

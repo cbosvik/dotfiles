@@ -1,4 +1,3 @@
-local wk = require("which-key")
 return {
 
   {
@@ -10,19 +9,22 @@ return {
     -- do 'sh install.sh 1' if you want to force compile locally
     -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
 
-    wk.register({
-      ["<leader>c"] = {
-        s = {
-          name = "+sniprun",
-          mode = { "n", "v" },
-          r = { "<cmd>SnipRun<cr>", "Run line" },
-          R = { "<cmd>'<,'>SnipRun<cr>", "Run block" },
-          i = { "<cmd>SnipInfo<cr>", "Info" },
-          c = { "<cmd>SnipReset<cr>", "Clear result" },
-          x = { "<cmd>SnipClose<cr>", "Close" },
+    init = function()
+      local wk = require("which-key")
+      wk.register({
+        ["<leader>c"] = {
+          s = {
+            name = "+sniprun",
+            mode = { "n", "v" },
+            r = { "<cmd>SnipRun<cr>", "Run line" },
+            R = { "<cmd>'<,'>SnipRun<cr>", "Run block" },
+            i = { "<cmd>SnipInfo<cr>", "Info" },
+            c = { "<cmd>SnipReset<cr>", "Clear result" },
+            x = { "<cmd>SnipClose<cr>", "Close" },
+          },
         },
-      },
-    }),
+      })
+    end,
     config = function()
       require("sniprun").setup({
         selected_interpreters = {}, --# use those instead of the default for the current filetype
