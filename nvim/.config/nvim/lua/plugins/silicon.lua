@@ -14,8 +14,8 @@ return {
     end,
     config = function()
       require("silicon").setup({
-        font = "jetbrainsmono nerd font=34",
-        theme = "base16",
+        font = "VictorMono Nerd Font=34",
+        -- theme = "base16-256",
         background = "#492db6",
         to_clipboard = true,
         window_title = function()
