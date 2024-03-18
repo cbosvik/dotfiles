@@ -9,7 +9,9 @@ return {
   },
   {
     "rest-nvim/rest.nvim",
-    dependencies = { { "nvim-lua/plenary.nvim" } },
+    ft = "http",
+    -- dependencies = { { "nvim-lua/plenary.nvim" } },
+    dependencies = { "luarocks.nvim" },
     init = function()
       local wk = require("which-key")
       wk.register({
