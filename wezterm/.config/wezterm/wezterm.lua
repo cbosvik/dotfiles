@@ -27,8 +27,9 @@ config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
 
 -- Colorscheme
-config.color_scheme = "tokyonight"
--- config.color_scheme = "tokyonight"
+-- config.color_scheme = "Rosé Pine (Gogh)"
+-- config.color_scheme = "Catppuccin Mocha (Gogh)"
+config.color_scheme = "Tokyo Night Storm"
 
 config.underline_thickness = 3
 config.cursor_thickness = 4

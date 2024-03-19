@@ -2,6 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 # Inserts a blank line between shell prompts
 add_newline = false
+command_timeout = 1000
 
 right_format = """$kubernetes"""
 
@@ -9,6 +10,7 @@ right_format = """$kubernetes"""
 disabled = false
 symbol = '☸ '
 format = '[$symbol$context( \($namespace\))]($style)'
+
 
 # [line_break]
 # disabled = true

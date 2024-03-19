@@ -7,7 +7,7 @@ return {
 
   {
     "jmederosalvarado/roslyn.nvim",
-    -- ft = "cs",
+    ft = "cs",
     config = function()
       require("roslyn").setup({
 

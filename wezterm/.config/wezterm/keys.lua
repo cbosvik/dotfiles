@@ -1,6 +1,7 @@
 local wezterm = require("wezterm")
 
 local act = wezterm.action
+
 local M = {}
 
 M.mod = "SHIFT|SUPER"
@@ -17,34 +18,37 @@ end)
 ---@param config Config
 function M.setup(config)
 	config.disable_default_key_bindings = true
+	config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 	config.keys = {
 		-- Scrollback
-		{ mods = M.mod, key = "k", action = act.ScrollByPage(-0.5) },
-		{ mods = M.mod, key = "j", action = act.ScrollByPage(0.5) },
+		{ mods = "LEADER", key = "k", action = act.ScrollByPage(-0.5) },
+		{ mods = "LEADER", key = "j", action = act.ScrollByPage(0.5) },
 		-- New Tab
-		{ mods = M.mod, key = "t", action = act.SpawnTab("CurrentPaneDomain") },
+		{ mods = "LEADER", key = "t", action = act.SpawnTab("CurrentPaneDomain") },
 		-- Splits
-		{ mods = M.mod, key = "Enter", action = M.smart_split },
-		{ mods = M.mod, key = "|", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
-		{ mods = M.mod, key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+		{ mods = "LEADER", key = "Enter", action = M.smart_split },
+		{ mods = "LEADER", key = "=", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		{ mods = "LEADER", key = "_", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		-- Move Tabs
-		{ mods = M.mod, key = ">", action = act.MoveTabRelative(1) },
-		{ mods = M.mod, key = "<", action = act.MoveTabRelative(-1) },
+		{ mods = "LEADER", key = ">", action = act.MoveTabRelative(1) },
+		{ mods = "LEADER", key = "<", action = act.MoveTabRelative(-1) },
+		-- New Tab
+		{ mods = "LEADER", key = "t", action = act.SpawnTab("CurrentPaneDomain") },
 		-- Acivate Tabs
-		{ mods = M.mod, key = "l", action = act({ ActivateTabRelative = 1 }) },
-		{ mods = M.mod, key = "h", action = act({ ActivateTabRelative = -1 }) },
-		{ mods = M.mod, key = "R", action = wezterm.action.RotatePanes("Clockwise") },
+		{ mods = "LEADER", key = "l", action = act({ ActivateTabRelative = 1 }) },
+		{ mods = "LEADER", key = "h", action = act({ ActivateTabRelative = -1 }) },
+		{ mods = "LEADER", key = "r", action = wezterm.action.RotatePanes("Clockwise") },
 		-- show the pane selection mode, but have it swap the active and selected panes
-		{ mods = M.mod, key = "S", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
+		{ mods = "LEADER", key = "s", action = wezterm.action.PaneSelect({ mode = "SwapWithActive" }) },
 		-- Clipboard
 		{ mods = M.mod, key = "C", action = act.CopyTo("Clipboard") },
-		{ mods = M.mod, key = "Space", action = act.QuickSelect },
-		{ mods = M.mod, key = "X", action = act.ActivateCopyMode },
-		{ mods = M.mod, key = "f", action = act.Search("CurrentSelectionOrEmptyString") },
+		{ mods = "LEADER", key = "Space", action = act.QuickSelect },
+		{ mods = "LEADER", key = "X", action = act.ActivateCopyMode },
+		{ mods = "LEADER", key = "f", action = act.Search("CurrentSelectionOrEmptyString") },
 		{ mods = M.mod, key = "V", action = act.PasteFrom("Clipboard") },
-		{ mods = M.mod, key = "M", action = act.TogglePaneZoomState },
-		{ mods = M.mod, key = "p", action = act.ActivateCommandPalette },
-		{ mods = M.mod, key = "d", action = act.ShowDebugOverlay },
+		{ mods = "LEADER", key = "m", action = act.TogglePaneZoomState },
+		{ mods = "LEADER", key = "p", action = act.ActivateCommandPalette },
+		{ mods = "LEADER", key = "d", action = act.ShowDebugOverlay },
 		M.split_nav("resize", "CTRL", "LeftArrow", "Right"),
 		M.split_nav("resize", "CTRL", "RightArrow", "Left"),
 		M.split_nav("resize", "CTRL", "UpArrow", "Up"),
@@ -52,11 +56,10 @@ function M.setup(config)
 		M.split_nav("move", "CTRL", "h", "Left"),
 		M.split_nav("move", "CTRL", "j", "Down"),
 		M.split_nav("move", "CTRL", "k", "Up"),
-		M.split_nav("move", "CTRL", "l", "Right"),
 	}
 end
 
----@param resize_or_move "resize" | "move"
+--@param resize_or_move "resize" | "move"
 ---@param mods string
 ---@param key string
 ---@param dir "Right" | "Left" | "Up" | "Down"
